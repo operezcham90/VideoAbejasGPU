@@ -1,0 +1,435 @@
+// To compile:
+// g++ fitness.c -lOpenCL -o fitness `pkg-config --cflags --libs opencv`
+
+// OpenCV (Computer Vision)
+#include <opencv2/core/core.hpp>
+#include <opencv2/highgui/highgui.hpp>
+#include <opencv2/imgproc/imgproc.hpp>
+
+// OpenCL (Parallel Computing)
+#include <CL/cl.h>
+
+// Other
+#include <math.h>
+#include <sys/time.h>
+#include <iostream>
+#include <fstream>
+#include <string>
+
+// ALOV++ configuration
+std::string path_alov = "/home/lcd/";
+std::string img_dir = "imagedata++/";
+std::string ann_dir = "alov300++_rectangleAnnotation_full/";
+std::string vid_name = "01-Light";
+int vid_num = 23;
+double img_ratio = 1;
+double max_window = 24.0;
+
+// GPU configuration
+char* kernel_file = "fitness_kernel.c";
+
+// Bee algorithm configuration
+int max_gen = 15;
+double n_distribution_m = 25;
+double n_distribution_c = 2;
+double rate_cross = 102; // beta 10%
+double rate_mut = 615; // alfa 60%
+double rate_rand = 307; //gamma 30%
+#define EPSILON  1e-6
+
+long LoadOpenCLKernel(char const* path, char **buf) {
+	FILE *fp;
+	size_t fsz;
+	long off_end;
+	int rc;
+
+	/* Open the file */
+	fp = fopen(path, "r");
+	if( NULL == fp ) {
+		return -1L;
+	}
+
+	/* Seek to the end of the file */
+	rc = fseek(fp, 0L, SEEK_END);
+	if( 0 != rc ) {
+		return -1L;
+	}
+
+	/* Byte offset to the end of the file (size) */
+	if( 0 > (off_end = ftell(fp)) ) {
+		return -1L;
+	}
+	fsz = (size_t)off_end;
+
+	/* Allocate a buffer to hold the whole file */
+	*buf = (char *) malloc( fsz+1);
+		if( NULL == *buf ) {
+		return -1L;
+	}
+
+	/* Rewind file pointer to start of file */
+	rewind(fp);
+
+	/* Slurp file into buffer */
+	if( fsz != fread(*buf, 1, fsz, fp) ) {
+		free(*buf);
+		return -1L;
+	}
+
+	/* Close the file */
+	if( EOF == fclose(fp) ) {
+		free(*buf);
+		return -1L;
+	}
+
+	/* Make sure the buffer is NUL-terminated, just in case */
+	(*buf)[fsz] = '\0';
+
+	/* Return the file size */
+	return (long)fsz;
+}
+
+int main(int argc, char** argv) {
+	// Initial position to track
+	int u, v, window, frame_num, u0, v0;
+	double ax, ay, bx, by, cx, cy, dx, dy;
+
+	// Read annotation file
+	char vid_num_str[5];
+	sprintf(vid_num_str, "%05d", vid_num);
+	const std::string& ann_path = path_alov + ann_dir + vid_name + '/' +
+		vid_name + "_video" + vid_num_str + ".ann";
+	FILE* ann_file = fopen(ann_path.c_str(), "r");
+	fscanf(ann_file, "%d %lf %lf %lf %lf %lf %lf %lf %lf\n",
+		&frame_num, &ax, &ay, &bx, &by, &cx, &cy, &dx, &dy);
+	u = round(std::min(ax, std::min(bx, std::min(cx, dx))));
+	v = round(std::min(ay, std::min(by, std::min(cy, dy))));
+	window = round(std::max(
+		std::max(ax, std::max(bx, std::max(cx, dx))) - u,
+		std::max(ay, std::max(by, std::max(cy, dy))) - v
+	));
+
+	// OpenCV variables
+	int err;
+	cl_device_id device_id;
+	cl_context context;
+	cl_command_queue commands;
+	cl_program program;
+	cl_kernel kernel;
+
+	// OpenCL device memory for matrices
+	cl_mem d_frame1, d_frame2, d_frame3, d_frame0;
+
+	// OpenCV matrices
+	cv::Mat frame1, frame2, frame3, frame0;
+	IplImage *img = NULL, *img2 = NULL, *img3 = NULL, *img0 = NULL;
+
+	// Read first frames
+	char frame_num_str[8];
+	sprintf(frame_num_str, "%08d", frame_num);
+	const std::string& vid_path = path_alov + img_dir + vid_name + '/' +
+		vid_name + "_video" + vid_num_str + "/" + frame_num_str + ".jpg";
+	frame1 = cv::imread(vid_path, CV_LOAD_IMAGE_COLOR);
+	frame_num++;
+	sprintf(frame_num_str, "%08d", frame_num);
+	const std::string& vid_path2 = path_alov + img_dir + vid_name + '/' +
+		vid_name + "_video" + vid_num_str + "/" + frame_num_str + ".jpg";
+	frame2 = cv::imread(vid_path2, CV_LOAD_IMAGE_COLOR);
+
+	// Resize if necessary
+	//if (frame1.cols * frame1.rows > 76800) {
+		img_ratio = (double)window / max_window;
+		cv::Mat temp;
+		cv::Size size(frame1.cols / img_ratio, frame1.rows / img_ratio);
+		cv::resize(frame1,temp,size);
+		frame1 = temp.clone();
+		cv::resize(frame2,temp,size);
+		frame2 = temp.clone();
+		u = u / img_ratio;
+		v = v / img_ratio;
+		window = window / img_ratio;
+	//}
+	frame3 = frame1.clone();
+	frame0 = frame1.clone();
+	u0 = u;
+	v0 = v;
+	
+	// Size
+	int w = frame1.cols;
+	int h = frame1.rows;
+
+	// Send frames to char arrays
+	unsigned char *f1 = (unsigned char *)frame1.data;
+	unsigned char *f2 = (unsigned char *)frame2.data;
+	unsigned char *f0 = (unsigned char *)frame0.data;
+	double *f3 = (double *)std::malloc((w*h)*sizeof(double));
+
+	// Get size of frame
+	size_t bytes = frame1.total() * frame1.elemSize();
+	printf("Width: %d px\n", w - window);
+	printf("Height: %d px\n", h - window);
+	printf("Bytes per frame: %d bytes\n", bytes);
+	printf("Bytes in result: %d bytes\n", w*h*sizeof(double));
+
+	cl_uint dev_cnt = 0;
+	clGetPlatformIDs(0, 0, &dev_cnt);
+
+	cl_platform_id platform_ids[100];
+	clGetPlatformIDs(dev_cnt, platform_ids, NULL);
+
+	// Connect to device
+	int gpu = 1;
+	err = clGetDeviceIDs(platform_ids[0],
+		gpu ? CL_DEVICE_TYPE_GPU : CL_DEVICE_TYPE_CPU, 1, &device_id, NULL);
+	if (err != CL_SUCCESS) {
+		printf("Error: Failed to create a device group!\n");
+		return EXIT_FAILURE;
+	}
+
+	// Create a compute context 
+	context = clCreateContext(0, 1, &device_id, NULL, NULL, &err);
+	if (!context) {
+		printf("Error: Failed to create a compute context!\n");
+		return EXIT_FAILURE;
+	}
+
+	// Create a command commands
+	commands = clCreateCommandQueue(context, device_id, 0, &err);
+	if (!commands) {
+		printf("Error: Failed to create a command commands!\n");
+		return EXIT_FAILURE;
+	}
+
+	// Create the compute program from the source file
+	char *KernelSource;
+	long lFileSize;
+	lFileSize = LoadOpenCLKernel(kernel_file, &KernelSource);
+	if( lFileSize < 0L ) {
+		perror("File read failed");
+		return 1;
+	}
+	program = clCreateProgramWithSource(context, 1, (const char **) & KernelSource, NULL, &err);
+	if (!program) {
+		printf("Error: Failed to create compute program!\n");
+		return EXIT_FAILURE;
+	}
+
+	// Build the program executable
+	err = clBuildProgram(program, 0, NULL, NULL, NULL, NULL);
+	if (err != CL_SUCCESS) {
+		size_t len;
+		char buffer[2048];
+		printf("Error: Failed to build program executable!\n");
+		clGetProgramBuildInfo(program, device_id, 
+			CL_PROGRAM_BUILD_LOG, sizeof(buffer), buffer, &len);
+		printf("%s\n", buffer);
+		exit(1);
+	}
+
+	// Create the compute kernel in the program we wish to run
+	kernel = clCreateKernel(program, "fitness", &err);
+	if (!kernel || err != CL_SUCCESS) {
+		printf("Error: Failed to create compute kernel!\n");
+		exit(1);
+	}
+
+	// Create the output arrays in device memory for our calculation
+	d_frame3 = clCreateBuffer(context, CL_MEM_READ_WRITE, w*h*sizeof(double), NULL, &err);
+	if (!d_frame3) {
+		printf("Error: Failed to allocate device memory (output)!\n");
+		exit(1);
+	}
+
+	struct timeval begin;
+	struct timeval end;
+	// Should fix this to have the actual number of frames
+	for (int current = 0; current < 10000; current++) {
+		// Begin time
+		gettimeofday(&begin, NULL);
+
+		// Clean results
+		for (int ii = 0; ii < w; ii++) {
+			for (int jj = 0; jj < h; jj++) {
+				f3[(ii) + (jj * w)] = -999999999;
+			}
+		}
+
+		// send frames data
+		d_frame0 = clCreateBuffer(context, CL_MEM_READ_WRITE | 
+			CL_MEM_COPY_HOST_PTR, bytes, f0, &err);
+		d_frame1 = clCreateBuffer(context, CL_MEM_READ_WRITE | 
+			CL_MEM_COPY_HOST_PTR, bytes, f1, &err);
+		d_frame2 = clCreateBuffer(context, CL_MEM_READ_WRITE |
+			CL_MEM_COPY_HOST_PTR, bytes, f2, &err);
+		d_frame3 = clCreateBuffer(context, CL_MEM_READ_WRITE |
+			CL_MEM_COPY_HOST_PTR, w*h*sizeof(double), f3, &err);
+		if (!d_frame0 || !d_frame1 || !d_frame2 || !d_frame3) {
+			printf("Error: Failed to allocate device memory!\n");
+			exit(1);
+		}
+
+		// (16 * 16) % 64 = 0, AMD recomends multiples of 64
+		size_t localWorkSize[2], globalWorkSize[2];
+		localWorkSize[0] = 16;
+		localWorkSize[1] = 16;
+		globalWorkSize[0] = (int)(localWorkSize[0] *
+			ceil((w - window) / (float)(localWorkSize[0])));
+		globalWorkSize[1] = (int)(localWorkSize[0] *
+			ceil((h - window) / (float)(localWorkSize[0])));
+
+		//Launch OpenCL kernel
+		err = clSetKernelArg(kernel, 0, sizeof(cl_mem), (void *)&d_frame1);
+		err |= clSetKernelArg(kernel, 1, sizeof(cl_mem), (void *)&d_frame2);
+		err |= clSetKernelArg(kernel, 2, sizeof(cl_mem), (void *)&d_frame3);
+		err |= clSetKernelArg(kernel, 3, sizeof(cl_mem), (void *)&d_frame0);
+		err |= clSetKernelArg(kernel, 4, sizeof(int), (void *)&w);
+		err |= clSetKernelArg(kernel, 5, sizeof(int), (void *)&h);
+		err |= clSetKernelArg(kernel, 6, sizeof(int), (void *)&u);
+		err |= clSetKernelArg(kernel, 7, sizeof(int), (void *)&v);
+		err |= clSetKernelArg(kernel, 8, sizeof(int), (void *)&u0);
+		err |= clSetKernelArg(kernel, 9, sizeof(int), (void *)&v0);
+		err |= clSetKernelArg(kernel, 10, sizeof(int), (void *)&window);
+		if (err != CL_SUCCESS) {
+			printf("Error: Failed to set kernel arguments! %d\n", err);
+			exit(1);
+		}
+		err = clEnqueueNDRangeKernel(commands, kernel, 2, NULL, 
+			globalWorkSize, localWorkSize, 0, NULL, NULL);
+		if (err != CL_SUCCESS) {
+			printf("Error: Failed to execute kernel! %d\n", err);
+			exit(1);
+		}
+		clFinish(commands);
+
+		//Retrieve result from device
+		err = clEnqueueReadBuffer(commands, d_frame3, CL_TRUE, 0, 
+			w*h*sizeof(double), f3, 0, NULL, NULL);
+		if (err != CL_SUCCESS) {
+			printf("Error: Failed to read output array! %d\n", err);
+			exit(1);
+		}
+
+		// Find best
+		double best = 0;
+		double worst = -1;
+		int bestx = 0;
+		int besty = 0;
+		for (int ii = 0; ii < w - window; ii++) {
+			for (int jj = 0; jj < h - window; jj++) {
+				double val = f3[(ii) + (jj * w)];
+				if (val > best) {
+					best = val;
+					bestx = ii;
+					besty = jj;
+				}
+				if (val < worst) {
+					worst = val;
+				}
+			}
+		}
+		printf("best value: %f (%d, %d)\n", best, bestx, besty);
+
+		// Show all
+		for (int ii = 0; ii < w; ii++) {
+			for (int jj = 0; jj < h; jj++) {
+				if (ii < w - window && jj < h - window) {
+					double val = f3[(ii) + (jj * w)];
+					double temp = (val - worst);
+					temp /= (best - worst);
+					temp *= 255;
+					unsigned char rval = temp;
+					frame3.data[(ii * 3) + (jj * 3 * w)] = rval;
+					frame3.data[(ii * 3) + (jj * 3 * w) + 1] = rval;
+					frame3.data[(ii * 3) + (jj * 3 * w) + 2] = rval;
+				} else {
+					frame3.data[(ii * 3) + (jj * 3 * w)] = 255;
+					frame3.data[(ii * 3) + (jj * 3 * w) + 1] = 0;
+					frame3.data[(ii * 3) + (jj * 3 * w) + 2] = 0;
+				}
+			}
+		}
+
+		// Show results
+		/*img = new IplImage(frame1);
+		img2 = new IplImage(frame2);
+		img3 = new IplImage(frame3);
+		img0 = new IplImage(frame0);
+
+		cvRectangle(img0, cvPoint(u0 - 1, v0 - 1),
+			cvPoint(window + u0 + 1, window + v0 + 1), CV_RGB(0,255,0), 1);
+		cvRectangle(img, cvPoint(u - 1, v - 1),
+			cvPoint(window + u + 1, window + v + 1), CV_RGB(0,255,0), 1);
+		cvRectangle(img2, cvPoint(bestx - 1, besty - 1),
+			cvPoint(window + bestx + 1, window + besty + 1), CV_RGB(0,255,0), 1);
+
+		cvShowImage("frame1", img);
+		cvShowImage("frame2", img2);
+		cvShowImage("frame3", img3);
+		cvShowImage("frame0", img0);
+		cv::moveWindow("frame1", 50, 50);
+		cv::moveWindow("frame2", 50 + w * 2, 50);
+		cv::moveWindow("frame3", 50 + w * 4, 50);
+		cv::moveWindow("frame0", 50, 50 + h * 2);*/
+
+		// Update frame0 sometimes
+		if (current % 1 == 0) {
+			frame0 = frame1.clone();
+			u0 = u;
+			v0 = v;
+		}
+
+		// For next frame
+		u = bestx;
+		v = besty;
+
+		// Read video file
+		frame_num++;
+		frame1 = frame2.clone();
+		sprintf(frame_num_str, "%08d", frame_num);
+		const std::string& vid_path3 = path_alov + img_dir + vid_name + '/' +
+			vid_name + "_video" + vid_num_str + "/" + frame_num_str + ".jpg";
+		frame2 = cv::imread(vid_path3, CV_LOAD_IMAGE_COLOR);
+		// Resize if necessary
+		if (img_ratio > 1) {
+			cv::Mat temp;
+			cv::Size size(w, h);
+			cv::resize(frame2,temp,size);
+			frame2 = temp.clone();
+		}
+		f1 = (unsigned char *)frame1.data;
+		f2 = (unsigned char *)frame2.data;
+		f0 = (unsigned char *)frame0.data;
+
+		// End time
+		gettimeofday(&end, NULL);
+		long int beginl = begin.tv_sec * 1000 + begin.tv_usec / 1000;
+		long int endl = end.tv_sec * 1000 + end.tv_usec / 1000;
+		double elapsed_secs = double(endl - beginl) / 1000;
+		printf("Elapsed seconds: %f\n", elapsed_secs);
+
+// Clean and finish
+	/*clReleaseMemObject(d_frame1);
+	clReleaseMemObject(d_frame2);
+	clReleaseMemObject(d_frame3);
+	clReleaseProgram(program);
+	clReleaseKernel(kernel);
+	clReleaseCommandQueue(commands);
+	clReleaseContext(context);*/
+
+		//cv::waitKey(200);
+	}
+
+	// Clean and finish
+	clReleaseMemObject(d_frame1);
+	clReleaseMemObject(d_frame2);
+	clReleaseMemObject(d_frame3);
+	clReleaseProgram(program);
+	clReleaseKernel(kernel);
+	clReleaseCommandQueue(commands);
+	clReleaseContext(context);
+
+	// End
+	//cv::waitKey(0);
+	
+	return 0;
+}
