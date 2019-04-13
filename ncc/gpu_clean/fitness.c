@@ -40,6 +40,9 @@ short u, v, window, initial_frame, last_frame, u0, v0, w0, h0;
 double img_ratio = 1.0;
 std::string path_result;
 std::ofstream result_file;
+int use_sobel = 0;
+int resting = 0;
+int honeybee = 0;
 
 // Honeybee configuration
 int cores_per_bee;
@@ -130,19 +133,21 @@ void read_config() {
 	std::cout << "Video name: " << vid_name << "\n";
 	std::cout << "Video number: " << vid_num << "\n";
 	std::cout << "Max window size: " << max_window << "\n";
-	/*std::cout << "Cores per bee: " << cores_per_bee << "\n";
-	std::cout << "Max generation: " << max_gen << "\n";
-	std::cout << "Eta for mutation: " << eta_m << "\n";
-	std::cout << "Eta for crossover: " << eta_c << "\n";
-	std::cout << "Alpha for exploration: " << rate_alpha_e << "\n";
-	std::cout << "Beta for exploration: " << rate_beta_e << "\n";
-	std::cout << "Gamma for exploration: " << rate_gamma_e << "\n";
-	std::cout << "Alpha for foraging: " << rate_alpha_r << "\n";
-	std::cout << "Beta for foraging: " << rate_beta_r << "\n";
-	std::cout << "Gamma for foraging: " << rate_gamma_r << "\n";
+	if (honeybee == 1) {
+		std::cout << "Cores per bee: " << cores_per_bee << "\n";
+		std::cout << "Max generation: " << max_gen << "\n";
+		std::cout << "Eta for mutation: " << eta_m << "\n";
+		std::cout << "Eta for crossover: " << eta_c << "\n";
+		std::cout << "Alpha for exploration: " << rate_alpha_e << "\n";
+		std::cout << "Beta for exploration: " << rate_beta_e << "\n";
+		std::cout << "Gamma for exploration: " << rate_gamma_e << "\n";
+		std::cout << "Alpha for foraging: " << rate_alpha_r << "\n";
+		std::cout << "Beta for foraging: " << rate_beta_r << "\n";
+		std::cout << "Gamma for foraging: " << rate_gamma_r << "\n";
 
-	std::cout << "Max window / sqrt(cores per bee): " << 
-		(max_window / sqrt(cores_per_bee)) << " (Should be integer)\n\n";*/
+		std::cout << "Max window / sqrt(cores per bee): " << 
+		(max_window / sqrt(cores_per_bee)) << " (Should be integer)\n\n";
+	}
 }
 
 // Read OpenCL kernel
@@ -255,12 +260,14 @@ void set_gpu() {
 		rate_alpha_r++;
 		rate_beta_r--;
 	}
-	/*printf("Alpha e: %f\n", rate_alpha_e);
-	printf("Beta e: %f\n", rate_beta_e);
-	printf("Gamma e: %f\n", rate_gamma_e);
-	printf("Alpha r: %f\n", rate_alpha_r);
-	printf("Beta r: %f\n", rate_beta_r);
-	printf("Gamma r: %f\n\n", rate_gamma_r);*/
+	if (honeybee == 1) {
+		printf("Alpha e: %f\n", rate_alpha_e);
+		printf("Beta e: %f\n", rate_beta_e);
+		printf("Gamma e: %f\n", rate_gamma_e);
+		printf("Alpha r: %f\n", rate_alpha_r);
+		printf("Beta r: %f\n", rate_beta_r);
+		printf("Gamma r: %f\n\n", rate_gamma_r);
+	}
 
 	// Create a compute context
 	context = clCreateContext(0, 1, &device_id, NULL, NULL, &err);
@@ -373,10 +380,50 @@ void save_img(cv::Mat m, int frame_num_m, std::string info) {
 float get_gray(int x, int y, cv::Mat img) {
 	cv::Vec3b c = img.at<cv::Vec3b>(cv::Point(x, y));
 	float r = c.val[0];
-	float g = c.val[0];
-	float b = c.val[0];
+	float g = c.val[1];
+	float b = c.val[2];
 	float gr = (r + g + b) / 3.0f;
 	return gr;
+}
+
+float get_color(int x, int y, cv::Mat img, int rgb) {
+	cv::Vec3b c = img.at<cv::Vec3b>(cv::Point(x, y));
+	return c.val[rgb];
+}
+
+float sobel(cv::Mat frame, int u, int v, int rgb) {
+	double Gx, Gy, res, frac, ent;
+	
+	Gx = get_color(u-1, v+1, frame, rgb) + 
+		2 * get_color(u, v+1, frame, rgb) +
+		get_color(u+1, v+1, frame, rgb) -
+		get_color(u-1, v-1, frame, rgb) -
+		2 * get_color(u, v-1, frame, rgb) -
+		get_color(u+1, v-1, frame, rgb);
+
+	Gy = get_color(u+1, v-1, frame, rgb) +
+		2 * get_color(u+1, v, frame, rgb) +
+		get_color(u+1, v+1, frame, rgb) -
+		get_color(u-1, v-1, frame, rgb) -
+		2 * get_color(u-1, v, frame, rgb) -
+		get_color(u-1, v+1, frame, rgb);
+
+	res = sqrt(Gx * Gx + Gy * Gy);
+
+	ent = trunc(res);
+	frac = res - ent;
+	res = ent;
+	if ((res >= 0) && (frac > 0.5))
+		res++;
+
+	return res;
+}
+
+float sobel_rgb(int x, int y, cv::Mat img) {
+	double r = sobel(img, x, y, 0);
+	double g = sobel(img, x, y, 1);
+	double b = sobel(img, x, y, 2);
+	return r + g + b;
 }
 
 // Main
@@ -420,19 +467,27 @@ for (int current = initial_frame + 1; current <= last_frame; current++) {
 
 	gettimeofday(&begin, NULL);
 
-	// Gray filter
+	// filter
 	float * frame1_gray = 
 		(float*)std::malloc((frame1.cols * frame1.rows) * sizeof(float));
 	float * frame2_gray = 
 		(float*)std::malloc((frame2.cols * frame2.rows) * sizeof(float));
 	for (int x = 0; x < frame1.cols; x++) {
 		for (int y = 0; y < frame1.rows; y++) {
-			frame1_gray[x + y * frame1.cols] = get_gray(x, y, frame1);
+			if (use_sobel == 0) {
+				frame1_gray[x + y * frame1.cols] = get_gray(x, y, frame1);
+			} else {
+				frame1_gray[x + y * frame1.cols] = sobel_rgb(x, y, frame1);
+			}
 		}
 	}
 	for (int x = 0; x < frame2.cols; x++) {
 		for (int y = 0; y < frame2.rows; y++) {
-			frame2_gray[x + y * frame2.cols] = get_gray(x, y, frame2);
+			if (use_sobel == 0) {
+				frame2_gray[x + y * frame2.cols] = get_gray(x, y, frame2);
+			} else {
+				frame2_gray[x + y * frame2.cols] = sobel_rgb(x, y, frame2);
+			}
 		}
 	}
 
@@ -523,6 +578,9 @@ for (int current = initial_frame + 1; current <= last_frame; current++) {
 	clReleaseKernel(kernel);
 	clReleaseCommandQueue(commands);
 	clReleaseContext(context);
+	free(frame1_gray);
+	free(frame2_gray);
+	free(gamma);
 
 	gettimeofday(&end, NULL);
 	long int beginl = begin.tv_sec * 1000 + begin.tv_usec / 1000;
@@ -538,6 +596,23 @@ result_file.open(path_result.c_str(), std::ofstream::app);
 	result_file << current << "," << u0 
 		<< "," << v0 << "," << w0 << "," << h0 << "\n";
 result_file.close();
+
+	// rest every 100 frames
+	if ((current - initial_frame) % 100 == 0 && resting == 1) {
+		if (avg_time /= current - initial_frame > 1.5) {
+		printf("Resting...\n");
+		gettimeofday(&begin, NULL);
+		while(true) {
+			gettimeofday(&end, NULL);
+			long int beginl = begin.tv_sec * 1000 + begin.tv_usec / 1000;
+			long int endl = end.tv_sec * 1000 + end.tv_usec / 1000;
+			double elapsed_secs = double(endl - beginl) / 1000;
+			if (elapsed_secs > 300) {
+				break;
+			}
+		}
+		}
+	}
 }
 
 	avg_time /= last_frame - (initial_frame + 1);

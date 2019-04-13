@@ -20,11 +20,11 @@ std::string path_alov = "/home/lcd/";
 std::string img_dir = "imagedata++/";
 std::string ann_dir = "alov300++_rectangleAnnotation_full/";
 std::string vid_name = "01-Light";
-int vid_num = 23;
-const std::string& path_result = "/home/output_ncc";
+int vid_num = 1;
+const std::string& path_result = "/home/lcd/1cpu";
 ofstream result_file;
-int max_window = 24;
-//int max_window = 1000;
+//int max_window = 24;
+int max_window = 1000;
 
 double get_color(int x, int y, IplImage *frame, int rgb) {
 	if (x < 0)
