@@ -1,0 +1,797 @@
+
+Reading config file: 
+Path ALOV++: /home/hwa/
+Path result: /home/hwa/result/13-ZoomingCamera_13
+Image dir: imagedata++/
+Annotation dir: alov300++_rectangleAnnotation_full/
+Video name: 13-ZoomingCamera
+Video number: 13
+Max window size: 24
+Reading annotation file: 
+u0: 761
+v0: 816
+Real window: 1012
+First frame: 81
+Last frame: 211
+
+Current frame: 82 of 211
+GPU preparation:
+Max work group size: 1024
+Number of bees: 256
+Valid result: 0.869258
+Elapsed seconds: 2.916000
+Current frame: 83 of 211
+GPU preparation:
+Max work group size: 1024
+Number of bees: 256
+Valid result: 0.885502
+Elapsed seconds: 2.887000
+Current frame: 84 of 211
+GPU preparation:
+Max work group size: 1024
+Number of bees: 256
+Valid result: 0.898058
+Elapsed seconds: 2.877000
+Current frame: 85 of 211
+GPU preparation:
+Max work group size: 1024
+Number of bees: 256
+Valid result: 0.902456
+Elapsed seconds: 2.882000
+Current frame: 86 of 211
+GPU preparation:
+Max work group size: 1024
+Number of bees: 256
+Valid result: 0.929329
+Elapsed seconds: 2.924000
+Current frame: 87 of 211
+GPU preparation:
+Max work group size: 1024
+Number of bees: 256
+Valid result: 0.946396
+Elapsed seconds: 2.885000
+Current frame: 88 of 211
+GPU preparation:
+Max work group size: 1024
+Number of bees: 256
+Valid result: 0.938015
+Elapsed seconds: 2.899000
+Current frame: 89 of 211
+GPU preparation:
+Max work group size: 1024
+Number of bees: 256
+Valid result: 0.937243
+Elapsed seconds: 2.909000
+Current frame: 90 of 211
+GPU preparation:
+Max work group size: 1024
+Number of bees: 256
+Valid result: 0.925133
+Elapsed seconds: 2.877000
+Current frame: 91 of 211
+GPU preparation:
+Max work group size: 1024
+Number of bees: 256
+Valid result: 0.905539
+Elapsed seconds: 2.922000
+Current frame: 92 of 211
+GPU preparation:
+Max work group size: 1024
+Number of bees: 256
+Valid result: 0.896395
+Elapsed seconds: 2.890000
+Current frame: 93 of 211
+GPU preparation:
+Max work group size: 1024
+Number of bees: 256
+Valid result: 0.876434
+Elapsed seconds: 2.905000
+Current frame: 94 of 211
+GPU preparation:
+Max work group size: 1024
+Number of bees: 256
+Valid result: 0.842659
+Elapsed seconds: 2.930000
+Current frame: 95 of 211
+GPU preparation:
+Max work group size: 1024
+Number of bees: 256
+Valid result: 0.847845
+Elapsed seconds: 2.960000
+Current frame: 96 of 211
+GPU preparation:
+Max work group size: 1024
+Number of bees: 256
+Valid result: 0.845602
+Elapsed seconds: 2.906000
+Current frame: 97 of 211
+GPU preparation:
+Max work group size: 1024
+Number of bees: 256
+Valid result: 0.814372
+Elapsed seconds: 2.937000
+Current frame: 98 of 211
+GPU preparation:
+Max work group size: 1024
+Number of bees: 256
+Valid result: 0.846943
+Elapsed seconds: 2.944000
+Current frame: 99 of 211
+GPU preparation:
+Max work group size: 1024
+Number of bees: 256
+Valid result: 0.871365
+Elapsed seconds: 2.911000
+Current frame: 100 of 211
+GPU preparation:
+Max work group size: 1024
+Number of bees: 256
+Valid result: 0.901795
+Elapsed seconds: 2.913000
+Current frame: 101 of 211
+GPU preparation:
+Max work group size: 1024
+Number of bees: 256
+Valid result: 0.923229
+Elapsed seconds: 2.925000
+Current frame: 102 of 211
+GPU preparation:
+Max work group size: 1024
+Number of bees: 256
+Valid result: 0.939689
+Elapsed seconds: 2.908000
+Current frame: 103 of 211
+GPU preparation:
+Max work group size: 1024
+Number of bees: 256
+Valid result: 0.955571
+Elapsed seconds: 2.916000
+Current frame: 104 of 211
+GPU preparation:
+Max work group size: 1024
+Number of bees: 256
+Valid result: 0.939296
+Elapsed seconds: 2.957000
+Current frame: 105 of 211
+GPU preparation:
+Max work group size: 1024
+Number of bees: 256
+Valid result: 0.869561
+Elapsed seconds: 2.905000
+Current frame: 106 of 211
+GPU preparation:
+Max work group size: 1024
+Number of bees: 256
+Valid result: 0.915555
+Elapsed seconds: 2.942000
+Current frame: 107 of 211
+GPU preparation:
+Max work group size: 1024
+Number of bees: 256
+Valid result: 0.901626
+Elapsed seconds: 2.910000
+Current frame: 108 of 211
+GPU preparation:
+Max work group size: 1024
+Number of bees: 256
+Valid result: 0.894103
+Elapsed seconds: 2.890000
+Current frame: 109 of 211
+GPU preparation:
+Max work group size: 1024
+Number of bees: 256
+Valid result: 0.893396
+Elapsed seconds: 2.895000
+Current frame: 110 of 211
+GPU preparation:
+Max work group size: 1024
+Number of bees: 256
+Valid result: 0.887200
+Elapsed seconds: 2.912000
+Current frame: 111 of 211
+GPU preparation:
+Max work group size: 1024
+Number of bees: 256
+Valid result: 0.878464
+Elapsed seconds: 2.902000
+Current frame: 112 of 211
+GPU preparation:
+Max work group size: 1024
+Number of bees: 256
+Valid result: 0.855968
+Elapsed seconds: 2.930000
+Current frame: 113 of 211
+GPU preparation:
+Max work group size: 1024
+Number of bees: 256
+Valid result: 0.873258
+Elapsed seconds: 2.942000
+Current frame: 114 of 211
+GPU preparation:
+Max work group size: 1024
+Number of bees: 256
+Valid result: 0.872675
+Elapsed seconds: 2.890000
+Current frame: 115 of 211
+GPU preparation:
+Max work group size: 1024
+Number of bees: 256
+Valid result: 0.910760
+Elapsed seconds: 2.943000
+Current frame: 116 of 211
+GPU preparation:
+Max work group size: 1024
+Number of bees: 256
+Valid result: 0.945664
+Elapsed seconds: 2.930000
+Current frame: 117 of 211
+GPU preparation:
+Max work group size: 1024
+Number of bees: 256
+Valid result: 0.949064
+Elapsed seconds: 2.901000
+Current frame: 118 of 211
+GPU preparation:
+Max work group size: 1024
+Number of bees: 256
+Valid result: 0.954914
+Elapsed seconds: 2.903000
+Current frame: 119 of 211
+GPU preparation:
+Max work group size: 1024
+Number of bees: 256
+Valid result: 0.947118
+Elapsed seconds: 2.932000
+Current frame: 120 of 211
+GPU preparation:
+Max work group size: 1024
+Number of bees: 256
+Valid result: 0.948796
+Elapsed seconds: 2.907000
+Current frame: 121 of 211
+GPU preparation:
+Max work group size: 1024
+Number of bees: 256
+Valid result: 0.926352
+Elapsed seconds: 2.923000
+Current frame: 122 of 211
+GPU preparation:
+Max work group size: 1024
+Number of bees: 256
+Valid result: 0.898642
+Elapsed seconds: 2.926000
+Current frame: 123 of 211
+GPU preparation:
+Max work group size: 1024
+Number of bees: 256
+Valid result: 0.881320
+Elapsed seconds: 2.930000
+Current frame: 124 of 211
+GPU preparation:
+Max work group size: 1024
+Number of bees: 256
+Valid result: 0.887171
+Elapsed seconds: 2.910000
+Current frame: 125 of 211
+GPU preparation:
+Max work group size: 1024
+Number of bees: 256
+Valid result: 0.888519
+Elapsed seconds: 2.913000
+Current frame: 126 of 211
+GPU preparation:
+Max work group size: 1024
+Number of bees: 256
+Valid result: 0.883127
+Elapsed seconds: 2.908000
+Current frame: 127 of 211
+GPU preparation:
+Max work group size: 1024
+Number of bees: 256
+Valid result: 0.840576
+Elapsed seconds: 2.895000
+Current frame: 128 of 211
+GPU preparation:
+Max work group size: 1024
+Number of bees: 256
+Valid result: 0.810710
+Elapsed seconds: 2.940000
+Current frame: 129 of 211
+GPU preparation:
+Max work group size: 1024
+Number of bees: 256
+Valid result: 0.832842
+Elapsed seconds: 2.916000
+Current frame: 130 of 211
+GPU preparation:
+Max work group size: 1024
+Number of bees: 256
+Valid result: 0.832574
+Elapsed seconds: 2.909000
+Current frame: 131 of 211
+GPU preparation:
+Max work group size: 1024
+Number of bees: 256
+Valid result: 0.876930
+Elapsed seconds: 2.912000
+Current frame: 132 of 211
+GPU preparation:
+Max work group size: 1024
+Number of bees: 256
+Valid result: 0.918021
+Elapsed seconds: 2.912000
+Current frame: 133 of 211
+GPU preparation:
+Max work group size: 1024
+Number of bees: 256
+Valid result: 0.945916
+Elapsed seconds: 2.927000
+Current frame: 134 of 211
+GPU preparation:
+Max work group size: 1024
+Number of bees: 256
+Valid result: 0.933467
+Elapsed seconds: 2.921000
+Current frame: 135 of 211
+GPU preparation:
+Max work group size: 1024
+Number of bees: 256
+Valid result: 0.932100
+Elapsed seconds: 2.931000
+Current frame: 136 of 211
+GPU preparation:
+Max work group size: 1024
+Number of bees: 256
+Valid result: 0.895050
+Elapsed seconds: 2.936000
+Current frame: 137 of 211
+GPU preparation:
+Max work group size: 1024
+Number of bees: 256
+Valid result: 0.887010
+Elapsed seconds: 2.920000
+Current frame: 138 of 211
+GPU preparation:
+Max work group size: 1024
+Number of bees: 256
+Valid result: 0.883149
+Elapsed seconds: 2.916000
+Current frame: 139 of 211
+GPU preparation:
+Max work group size: 1024
+Number of bees: 256
+Valid result: 0.871620
+Elapsed seconds: 2.916000
+Current frame: 140 of 211
+GPU preparation:
+Max work group size: 1024
+Number of bees: 256
+Valid result: 0.853234
+Elapsed seconds: 2.928000
+Current frame: 141 of 211
+GPU preparation:
+Max work group size: 1024
+Number of bees: 256
+Valid result: 0.836420
+Elapsed seconds: 2.937000
+Current frame: 142 of 211
+GPU preparation:
+Max work group size: 1024
+Number of bees: 256
+Valid result: 0.728592
+Elapsed seconds: 2.909000
+Current frame: 143 of 211
+GPU preparation:
+Max work group size: 1024
+Number of bees: 256
+Valid result: 0.848396
+Elapsed seconds: 2.912000
+Current frame: 144 of 211
+GPU preparation:
+Max work group size: 1024
+Number of bees: 256
+Valid result: 0.807764
+Elapsed seconds: 2.925000
+Current frame: 145 of 211
+GPU preparation:
+Max work group size: 1024
+Number of bees: 256
+Valid result: 0.824845
+Elapsed seconds: 2.925000
+Current frame: 146 of 211
+GPU preparation:
+Max work group size: 1024
+Number of bees: 256
+Valid result: 0.904287
+Elapsed seconds: 2.932000
+Current frame: 147 of 211
+GPU preparation:
+Max work group size: 1024
+Number of bees: 256
+Valid result: 0.946115
+Elapsed seconds: 2.941000
+Current frame: 148 of 211
+GPU preparation:
+Max work group size: 1024
+Number of bees: 256
+Valid result: 0.943177
+Elapsed seconds: 2.923000
+Current frame: 149 of 211
+GPU preparation:
+Max work group size: 1024
+Number of bees: 256
+Valid result: 0.949048
+Elapsed seconds: 2.935000
+Current frame: 150 of 211
+GPU preparation:
+Max work group size: 1024
+Number of bees: 256
+Valid result: 0.929823
+Elapsed seconds: 2.922000
+Current frame: 151 of 211
+GPU preparation:
+Max work group size: 1024
+Number of bees: 256
+Valid result: 0.891791
+Elapsed seconds: 2.915000
+Current frame: 152 of 211
+GPU preparation:
+Max work group size: 1024
+Number of bees: 256
+Valid result: 0.848854
+Elapsed seconds: 2.950000
+Current frame: 153 of 211
+GPU preparation:
+Max work group size: 1024
+Number of bees: 256
+Valid result: 0.867954
+Elapsed seconds: 2.906000
+Current frame: 154 of 211
+GPU preparation:
+Max work group size: 1024
+Number of bees: 256
+Valid result: 0.897623
+Elapsed seconds: 2.956000
+Current frame: 155 of 211
+GPU preparation:
+Max work group size: 1024
+Number of bees: 256
+Valid result: 0.861873
+Elapsed seconds: 2.906000
+Current frame: 156 of 211
+GPU preparation:
+Max work group size: 1024
+Number of bees: 256
+Valid result: 0.818990
+Elapsed seconds: 2.918000
+Current frame: 157 of 211
+GPU preparation:
+Max work group size: 1024
+Number of bees: 256
+Valid result: 0.809713
+Elapsed seconds: 2.948000
+Current frame: 158 of 211
+GPU preparation:
+Max work group size: 1024
+Number of bees: 256
+Valid result: 0.780859
+Elapsed seconds: 2.906000
+Current frame: 159 of 211
+GPU preparation:
+Max work group size: 1024
+Number of bees: 256
+Valid result: 0.776402
+Elapsed seconds: 2.928000
+Current frame: 160 of 211
+GPU preparation:
+Max work group size: 1024
+Number of bees: 256
+Valid result: 0.903534
+Elapsed seconds: 2.923000
+Current frame: 161 of 211
+GPU preparation:
+Max work group size: 1024
+Number of bees: 256
+Valid result: 0.946579
+Elapsed seconds: 2.929000
+Current frame: 162 of 211
+GPU preparation:
+Max work group size: 1024
+Number of bees: 256
+Valid result: 0.958723
+Elapsed seconds: 2.915000
+Current frame: 163 of 211
+GPU preparation:
+Max work group size: 1024
+Number of bees: 256
+Valid result: 0.956364
+Elapsed seconds: 2.902000
+Current frame: 164 of 211
+GPU preparation:
+Max work group size: 1024
+Number of bees: 256
+Valid result: 0.950354
+Elapsed seconds: 2.921000
+Current frame: 165 of 211
+GPU preparation:
+Max work group size: 1024
+Number of bees: 256
+Valid result: 0.913689
+Elapsed seconds: 2.911000
+Current frame: 166 of 211
+GPU preparation:
+Max work group size: 1024
+Number of bees: 256
+Valid result: 0.897510
+Elapsed seconds: 2.916000
+Current frame: 167 of 211
+GPU preparation:
+Max work group size: 1024
+Number of bees: 256
+Valid result: 0.902962
+Elapsed seconds: 2.916000
+Current frame: 168 of 211
+GPU preparation:
+Max work group size: 1024
+Number of bees: 256
+Valid result: 0.864719
+Elapsed seconds: 2.927000
+Current frame: 169 of 211
+GPU preparation:
+Max work group size: 1024
+Number of bees: 256
+Valid result: 0.844401
+Elapsed seconds: 2.930000
+Current frame: 170 of 211
+GPU preparation:
+Max work group size: 1024
+Number of bees: 256
+Valid result: 0.749412
+Elapsed seconds: 2.927000
+Current frame: 171 of 211
+GPU preparation:
+Max work group size: 1024
+Number of bees: 256
+Valid result: 0.771463
+Elapsed seconds: 2.935000
+Current frame: 172 of 211
+GPU preparation:
+Max work group size: 1024
+Number of bees: 256
+Valid result: 0.858123
+Elapsed seconds: 2.919000
+Current frame: 173 of 211
+GPU preparation:
+Max work group size: 1024
+Number of bees: 256
+Valid result: 0.814755
+Elapsed seconds: 2.947000
+Current frame: 174 of 211
+GPU preparation:
+Max work group size: 1024
+Number of bees: 256
+Valid result: 0.805814
+Elapsed seconds: 2.922000
+Current frame: 175 of 211
+GPU preparation:
+Max work group size: 1024
+Number of bees: 256
+Valid result: 0.904203
+Elapsed seconds: 2.926000
+Current frame: 176 of 211
+GPU preparation:
+Max work group size: 1024
+Number of bees: 256
+Valid result: 0.939655
+Elapsed seconds: 2.944000
+Current frame: 177 of 211
+GPU preparation:
+Max work group size: 1024
+Number of bees: 256
+Valid result: 0.915700
+Elapsed seconds: 2.978000
+Current frame: 178 of 211
+GPU preparation:
+Max work group size: 1024
+Number of bees: 256
+Valid result: 0.924316
+Elapsed seconds: 2.992000
+Current frame: 179 of 211
+GPU preparation:
+Max work group size: 1024
+Number of bees: 256
+Valid result: 0.912341
+Elapsed seconds: 2.952000
+Current frame: 180 of 211
+GPU preparation:
+Max work group size: 1024
+Number of bees: 256
+Valid result: 0.865686
+Elapsed seconds: 3.002000
+Current frame: 181 of 211
+GPU preparation:
+Max work group size: 1024
+Number of bees: 256
+Valid result: 0.884956
+Elapsed seconds: 3.031000
+Current frame: 182 of 211
+GPU preparation:
+Max work group size: 1024
+Number of bees: 256
+Valid result: 0.855609
+Elapsed seconds: 6.585000
+Current frame: 183 of 211
+GPU preparation:
+Max work group size: 1024
+Number of bees: 256
+Valid result: 0.882932
+Elapsed seconds: 3.493000
+Current frame: 184 of 211
+GPU preparation:
+Max work group size: 1024
+Number of bees: 256
+Valid result: 0.698795
+Elapsed seconds: 3.256000
+Current frame: 185 of 211
+GPU preparation:
+Max work group size: 1024
+Number of bees: 256
+Valid result: 0.831657
+Elapsed seconds: 3.626000
+Current frame: 186 of 211
+GPU preparation:
+Max work group size: 1024
+Number of bees: 256
+Valid result: 0.922626
+Elapsed seconds: 3.032000
+Current frame: 187 of 211
+GPU preparation:
+Max work group size: 1024
+Number of bees: 256
+Valid result: 0.948273
+Elapsed seconds: 3.565000
+Current frame: 188 of 211
+GPU preparation:
+Max work group size: 1024
+Number of bees: 256
+Valid result: 0.962454
+Elapsed seconds: 2.986000
+Current frame: 189 of 211
+GPU preparation:
+Max work group size: 1024
+Number of bees: 256
+Valid result: 0.957969
+Elapsed seconds: 3.368000
+Current frame: 190 of 211
+GPU preparation:
+Max work group size: 1024
+Number of bees: 256
+Valid result: 0.963410
+Elapsed seconds: 3.033000
+Current frame: 191 of 211
+GPU preparation:
+Max work group size: 1024
+Number of bees: 256
+Valid result: 0.961667
+Elapsed seconds: 3.048000
+Current frame: 192 of 211
+GPU preparation:
+Max work group size: 1024
+Number of bees: 256
+Valid result: 0.984865
+Elapsed seconds: 3.758000
+Current frame: 193 of 211
+GPU preparation:
+Max work group size: 1024
+Number of bees: 256
+Valid result: 0.961890
+Elapsed seconds: 2.992000
+Current frame: 194 of 211
+GPU preparation:
+Max work group size: 1024
+Number of bees: 256
+Valid result: 0.933544
+Elapsed seconds: 4.011000
+Current frame: 195 of 211
+GPU preparation:
+Max work group size: 1024
+Number of bees: 256
+Valid result: 0.864490
+Elapsed seconds: 3.113000
+Current frame: 196 of 211
+GPU preparation:
+Max work group size: 1024
+Number of bees: 256
+Valid result: 0.898443
+Elapsed seconds: 4.261000
+Current frame: 197 of 211
+GPU preparation:
+Max work group size: 1024
+Number of bees: 256
+Valid result: 0.919345
+Elapsed seconds: 2.953000
+Current frame: 198 of 211
+GPU preparation:
+Max work group size: 1024
+Number of bees: 256
+Valid result: 0.866625
+Elapsed seconds: 3.051000
+Current frame: 199 of 211
+GPU preparation:
+Max work group size: 1024
+Number of bees: 256
+Valid result: 0.818187
+Elapsed seconds: 3.061000
+Current frame: 200 of 211
+GPU preparation:
+Max work group size: 1024
+Number of bees: 256
+Valid result: 0.914402
+Elapsed seconds: 4.310000
+Current frame: 201 of 211
+GPU preparation:
+Max work group size: 1024
+Number of bees: 256
+Valid result: 0.938744
+Elapsed seconds: 2.996000
+Current frame: 202 of 211
+GPU preparation:
+Max work group size: 1024
+Number of bees: 256
+Valid result: 0.930436
+Elapsed seconds: 8.707000
+Current frame: 203 of 211
+GPU preparation:
+Max work group size: 1024
+Number of bees: 256
+Valid result: 0.915540
+Elapsed seconds: 4.470000
+Current frame: 204 of 211
+GPU preparation:
+Max work group size: 1024
+Number of bees: 256
+Valid result: 0.904687
+Elapsed seconds: 4.887000
+Current frame: 205 of 211
+GPU preparation:
+Max work group size: 1024
+Number of bees: 256
+Valid result: 0.941107
+Elapsed seconds: 4.083000
+Current frame: 206 of 211
+GPU preparation:
+Max work group size: 1024
+Number of bees: 256
+Valid result: 0.964845
+Elapsed seconds: 3.517000
+Current frame: 207 of 211
+GPU preparation:
+Max work group size: 1024
+Number of bees: 256
+Valid result: 0.959159
+Elapsed seconds: 3.875000
+Current frame: 208 of 211
+GPU preparation:
+Max work group size: 1024
+Number of bees: 256
+Valid result: 0.953874
+Elapsed seconds: 5.261000
+Current frame: 209 of 211
+GPU preparation:
+Max work group size: 1024
+Number of bees: 256
+Valid result: 0.951473
+Elapsed seconds: 4.323000
+Current frame: 210 of 211
+GPU preparation:
+Max work group size: 1024
+Number of bees: 256
+Valid result: 0.916059
+Elapsed seconds: 5.574000
+Current frame: 211 of 211
+GPU preparation:
+Max work group size: 1024
+Number of bees: 256
+Valid result: 0.874589
+Elapsed seconds: 3.819000
+Average seconds: 3.188186

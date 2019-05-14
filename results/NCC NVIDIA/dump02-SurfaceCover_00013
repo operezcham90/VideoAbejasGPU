@@ -1,0 +1,21 @@
+
+Reading config file: 
+Path ALOV++: /home/hwa/
+Path result: /home/hwa/result/02-SurfaceCover_13
+Image dir: imagedata++/
+Annotation dir: alov300++_rectangleAnnotation_full/
+Video name: 02-SurfaceCover
+Video number: 13
+Max window size: 24
+Reading annotation file: 
+u0: 522
+v0: 230
+Real window: 1030
+First frame: 20
+Last frame: 200
+
+Current frame: 21 of 200
+GPU preparation:
+Max work group size: 1024
+Number of bees: 256
+Error: Failed to read output array! -5

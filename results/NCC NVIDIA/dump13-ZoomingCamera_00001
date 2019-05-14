@@ -1,0 +1,39 @@
+
+Reading config file: 
+Path ALOV++: /home/hwa/
+Path result: /home/hwa/result/13-ZoomingCamera_1
+Image dir: imagedata++/
+Annotation dir: alov300++_rectangleAnnotation_full/
+Video name: 13-ZoomingCamera
+Video number: 1
+Max window size: 24
+Reading annotation file: 
+u0: 818
+v0: 353
+Real window: 1016
+First frame: 1
+Last frame: 76
+
+Current frame: 2 of 76
+GPU preparation:
+Max work group size: 1024
+Number of bees: 256
+Valid result: 0.983017
+Elapsed seconds: 11.123000
+Current frame: 3 of 76
+GPU preparation:
+Max work group size: 1024
+Number of bees: 256
+Valid result: 0.975922
+Elapsed seconds: 10.957000
+Current frame: 4 of 76
+GPU preparation:
+Max work group size: 1024
+Number of bees: 256
+Valid result: 0.976052
+Elapsed seconds: 10.915000
+Current frame: 5 of 76
+GPU preparation:
+Max work group size: 1024
+Number of bees: 256
+Error: Failed to read output array! -5

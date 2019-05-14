@@ -1,0 +1,21 @@
+
+Reading config file: 
+Path ALOV++: /home/hwa/
+Path result: /home/hwa/result/05-Shape_8
+Image dir: imagedata++/
+Annotation dir: alov300++_rectangleAnnotation_full/
+Video name: 05-Shape
+Video number: 8
+Max window size: 24
+Reading annotation file: 
+u0: 607
+v0: 285
+Real window: 1361
+First frame: 1
+Last frame: 225
+
+Current frame: 2 of 225
+GPU preparation:
+Max work group size: 1024
+Number of bees: 256
+Error: Failed to read output array! -5

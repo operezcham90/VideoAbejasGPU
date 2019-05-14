@@ -1,0 +1,21 @@
+
+Reading config file: 
+Path ALOV++: /home/hwa/
+Path result: /home/hwa/result/06-MotionSmoothness_3
+Image dir: imagedata++/
+Annotation dir: alov300++_rectangleAnnotation_full/
+Video name: 06-MotionSmoothness
+Video number: 3
+Max window size: 24
+Reading annotation file: 
+u0: 1
+v0: 204
+Real window: 1156
+First frame: 2
+Last frame: 202
+
+Current frame: 3 of 202
+GPU preparation:
+Max work group size: 1024
+Number of bees: 256
+Error: Failed to read output array! -5

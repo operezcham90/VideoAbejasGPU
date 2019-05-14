@@ -1,0 +1,797 @@
+
+Reading config file: 
+Path ALOV++: /home/lcd/
+Path result: /home/lcd/result/05-Shape_13
+Image dir: imagedata++/
+Annotation dir: alov300++_rectangleAnnotation_full/
+Video name: 05-Shape
+Video number: 13
+Max window size: 24
+Reading annotation file: 
+u0: 314
+v0: 142
+Real window: 426
+First frame: 34
+Last frame: 229
+
+Current frame: 35 of 229
+GPU preparation:
+Max work group size: 256
+Elapsed seconds: 0.067000
+Current frame: 36 of 229
+GPU preparation:
+Max work group size: 256
+Elapsed seconds: 0.064000
+Current frame: 37 of 229
+GPU preparation:
+Max work group size: 256
+Elapsed seconds: 0.064000
+Current frame: 38 of 229
+GPU preparation:
+Max work group size: 256
+Elapsed seconds: 0.063000
+Current frame: 39 of 229
+GPU preparation:
+Max work group size: 256
+Elapsed seconds: 0.063000
+Current frame: 40 of 229
+GPU preparation:
+Max work group size: 256
+Elapsed seconds: 0.064000
+Current frame: 41 of 229
+GPU preparation:
+Max work group size: 256
+Elapsed seconds: 0.064000
+Current frame: 42 of 229
+GPU preparation:
+Max work group size: 256
+Elapsed seconds: 0.063000
+Current frame: 43 of 229
+GPU preparation:
+Max work group size: 256
+Elapsed seconds: 0.063000
+Current frame: 44 of 229
+GPU preparation:
+Max work group size: 256
+Elapsed seconds: 0.064000
+Current frame: 45 of 229
+GPU preparation:
+Max work group size: 256
+Elapsed seconds: 0.063000
+Current frame: 46 of 229
+GPU preparation:
+Max work group size: 256
+Elapsed seconds: 0.063000
+Current frame: 47 of 229
+GPU preparation:
+Max work group size: 256
+Elapsed seconds: 0.063000
+Current frame: 48 of 229
+GPU preparation:
+Max work group size: 256
+Elapsed seconds: 0.064000
+Current frame: 49 of 229
+GPU preparation:
+Max work group size: 256
+Elapsed seconds: 0.062000
+Current frame: 50 of 229
+GPU preparation:
+Max work group size: 256
+Elapsed seconds: 0.063000
+Current frame: 51 of 229
+GPU preparation:
+Max work group size: 256
+Elapsed seconds: 0.064000
+Current frame: 52 of 229
+GPU preparation:
+Max work group size: 256
+Elapsed seconds: 0.063000
+Current frame: 53 of 229
+GPU preparation:
+Max work group size: 256
+Elapsed seconds: 0.064000
+Current frame: 54 of 229
+GPU preparation:
+Max work group size: 256
+Elapsed seconds: 0.064000
+Current frame: 55 of 229
+GPU preparation:
+Max work group size: 256
+Elapsed seconds: 0.064000
+Current frame: 56 of 229
+GPU preparation:
+Max work group size: 256
+Elapsed seconds: 0.063000
+Current frame: 57 of 229
+GPU preparation:
+Max work group size: 256
+Elapsed seconds: 0.065000
+Current frame: 58 of 229
+GPU preparation:
+Max work group size: 256
+Elapsed seconds: 0.063000
+Current frame: 59 of 229
+GPU preparation:
+Max work group size: 256
+Elapsed seconds: 0.064000
+Current frame: 60 of 229
+GPU preparation:
+Max work group size: 256
+Elapsed seconds: 0.064000
+Current frame: 61 of 229
+GPU preparation:
+Max work group size: 256
+Elapsed seconds: 0.064000
+Current frame: 62 of 229
+GPU preparation:
+Max work group size: 256
+Elapsed seconds: 0.063000
+Current frame: 63 of 229
+GPU preparation:
+Max work group size: 256
+Elapsed seconds: 0.064000
+Current frame: 64 of 229
+GPU preparation:
+Max work group size: 256
+Elapsed seconds: 0.063000
+Current frame: 65 of 229
+GPU preparation:
+Max work group size: 256
+Elapsed seconds: 0.063000
+Current frame: 66 of 229
+GPU preparation:
+Max work group size: 256
+Elapsed seconds: 0.063000
+Current frame: 67 of 229
+GPU preparation:
+Max work group size: 256
+Elapsed seconds: 0.063000
+Current frame: 68 of 229
+GPU preparation:
+Max work group size: 256
+Elapsed seconds: 0.063000
+Current frame: 69 of 229
+GPU preparation:
+Max work group size: 256
+Elapsed seconds: 0.063000
+Current frame: 70 of 229
+GPU preparation:
+Max work group size: 256
+Elapsed seconds: 0.064000
+Current frame: 71 of 229
+GPU preparation:
+Max work group size: 256
+Elapsed seconds: 0.063000
+Current frame: 72 of 229
+GPU preparation:
+Max work group size: 256
+Elapsed seconds: 0.063000
+Current frame: 73 of 229
+GPU preparation:
+Max work group size: 256
+Elapsed seconds: 0.063000
+Current frame: 74 of 229
+GPU preparation:
+Max work group size: 256
+Elapsed seconds: 0.063000
+Current frame: 75 of 229
+GPU preparation:
+Max work group size: 256
+Elapsed seconds: 0.063000
+Current frame: 76 of 229
+GPU preparation:
+Max work group size: 256
+Elapsed seconds: 0.063000
+Current frame: 77 of 229
+GPU preparation:
+Max work group size: 256
+Elapsed seconds: 0.063000
+Current frame: 78 of 229
+GPU preparation:
+Max work group size: 256
+Elapsed seconds: 0.063000
+Current frame: 79 of 229
+GPU preparation:
+Max work group size: 256
+Elapsed seconds: 0.062000
+Current frame: 80 of 229
+GPU preparation:
+Max work group size: 256
+Elapsed seconds: 0.065000
+Current frame: 81 of 229
+GPU preparation:
+Max work group size: 256
+Elapsed seconds: 0.064000
+Current frame: 82 of 229
+GPU preparation:
+Max work group size: 256
+Elapsed seconds: 0.063000
+Current frame: 83 of 229
+GPU preparation:
+Max work group size: 256
+Elapsed seconds: 0.063000
+Current frame: 84 of 229
+GPU preparation:
+Max work group size: 256
+Elapsed seconds: 0.062000
+Current frame: 85 of 229
+GPU preparation:
+Max work group size: 256
+Elapsed seconds: 0.063000
+Current frame: 86 of 229
+GPU preparation:
+Max work group size: 256
+Elapsed seconds: 0.064000
+Current frame: 87 of 229
+GPU preparation:
+Max work group size: 256
+Elapsed seconds: 0.064000
+Current frame: 88 of 229
+GPU preparation:
+Max work group size: 256
+Elapsed seconds: 0.065000
+Current frame: 89 of 229
+GPU preparation:
+Max work group size: 256
+Elapsed seconds: 0.063000
+Current frame: 90 of 229
+GPU preparation:
+Max work group size: 256
+Elapsed seconds: 0.064000
+Current frame: 91 of 229
+GPU preparation:
+Max work group size: 256
+Elapsed seconds: 0.063000
+Current frame: 92 of 229
+GPU preparation:
+Max work group size: 256
+Elapsed seconds: 0.063000
+Current frame: 93 of 229
+GPU preparation:
+Max work group size: 256
+Elapsed seconds: 0.064000
+Current frame: 94 of 229
+GPU preparation:
+Max work group size: 256
+Elapsed seconds: 0.064000
+Current frame: 95 of 229
+GPU preparation:
+Max work group size: 256
+Elapsed seconds: 0.064000
+Current frame: 96 of 229
+GPU preparation:
+Max work group size: 256
+Elapsed seconds: 0.064000
+Current frame: 97 of 229
+GPU preparation:
+Max work group size: 256
+Elapsed seconds: 0.063000
+Current frame: 98 of 229
+GPU preparation:
+Max work group size: 256
+Elapsed seconds: 0.063000
+Current frame: 99 of 229
+GPU preparation:
+Max work group size: 256
+Elapsed seconds: 0.064000
+Current frame: 100 of 229
+GPU preparation:
+Max work group size: 256
+Elapsed seconds: 0.065000
+Current frame: 101 of 229
+GPU preparation:
+Max work group size: 256
+Elapsed seconds: 0.063000
+Current frame: 102 of 229
+GPU preparation:
+Max work group size: 256
+Elapsed seconds: 0.064000
+Current frame: 103 of 229
+GPU preparation:
+Max work group size: 256
+Elapsed seconds: 0.064000
+Current frame: 104 of 229
+GPU preparation:
+Max work group size: 256
+Elapsed seconds: 0.064000
+Current frame: 105 of 229
+GPU preparation:
+Max work group size: 256
+Elapsed seconds: 0.063000
+Current frame: 106 of 229
+GPU preparation:
+Max work group size: 256
+Elapsed seconds: 0.063000
+Current frame: 107 of 229
+GPU preparation:
+Max work group size: 256
+Elapsed seconds: 0.063000
+Current frame: 108 of 229
+GPU preparation:
+Max work group size: 256
+Elapsed seconds: 0.063000
+Current frame: 109 of 229
+GPU preparation:
+Max work group size: 256
+Elapsed seconds: 0.063000
+Current frame: 110 of 229
+GPU preparation:
+Max work group size: 256
+Elapsed seconds: 0.064000
+Current frame: 111 of 229
+GPU preparation:
+Max work group size: 256
+Elapsed seconds: 0.064000
+Current frame: 112 of 229
+GPU preparation:
+Max work group size: 256
+Elapsed seconds: 0.063000
+Current frame: 113 of 229
+GPU preparation:
+Max work group size: 256
+Elapsed seconds: 0.063000
+Current frame: 114 of 229
+GPU preparation:
+Max work group size: 256
+Elapsed seconds: 0.063000
+Current frame: 115 of 229
+GPU preparation:
+Max work group size: 256
+Elapsed seconds: 0.064000
+Current frame: 116 of 229
+GPU preparation:
+Max work group size: 256
+Elapsed seconds: 0.064000
+Current frame: 117 of 229
+GPU preparation:
+Max work group size: 256
+Elapsed seconds: 0.064000
+Current frame: 118 of 229
+GPU preparation:
+Max work group size: 256
+Elapsed seconds: 0.064000
+Current frame: 119 of 229
+GPU preparation:
+Max work group size: 256
+Elapsed seconds: 0.064000
+Current frame: 120 of 229
+GPU preparation:
+Max work group size: 256
+Elapsed seconds: 0.064000
+Current frame: 121 of 229
+GPU preparation:
+Max work group size: 256
+Elapsed seconds: 0.063000
+Current frame: 122 of 229
+GPU preparation:
+Max work group size: 256
+Elapsed seconds: 0.064000
+Current frame: 123 of 229
+GPU preparation:
+Max work group size: 256
+Elapsed seconds: 0.063000
+Current frame: 124 of 229
+GPU preparation:
+Max work group size: 256
+Elapsed seconds: 0.063000
+Current frame: 125 of 229
+GPU preparation:
+Max work group size: 256
+Elapsed seconds: 0.063000
+Current frame: 126 of 229
+GPU preparation:
+Max work group size: 256
+Elapsed seconds: 0.063000
+Current frame: 127 of 229
+GPU preparation:
+Max work group size: 256
+Elapsed seconds: 0.063000
+Current frame: 128 of 229
+GPU preparation:
+Max work group size: 256
+Elapsed seconds: 0.063000
+Current frame: 129 of 229
+GPU preparation:
+Max work group size: 256
+Elapsed seconds: 0.064000
+Current frame: 130 of 229
+GPU preparation:
+Max work group size: 256
+Elapsed seconds: 0.064000
+Current frame: 131 of 229
+GPU preparation:
+Max work group size: 256
+Elapsed seconds: 0.064000
+Current frame: 132 of 229
+GPU preparation:
+Max work group size: 256
+Elapsed seconds: 0.064000
+Current frame: 133 of 229
+GPU preparation:
+Max work group size: 256
+Elapsed seconds: 0.064000
+Current frame: 134 of 229
+GPU preparation:
+Max work group size: 256
+Elapsed seconds: 0.064000
+Current frame: 135 of 229
+GPU preparation:
+Max work group size: 256
+Elapsed seconds: 0.063000
+Current frame: 136 of 229
+GPU preparation:
+Max work group size: 256
+Elapsed seconds: 0.063000
+Current frame: 137 of 229
+GPU preparation:
+Max work group size: 256
+Elapsed seconds: 0.064000
+Current frame: 138 of 229
+GPU preparation:
+Max work group size: 256
+Elapsed seconds: 0.064000
+Current frame: 139 of 229
+GPU preparation:
+Max work group size: 256
+Elapsed seconds: 0.063000
+Current frame: 140 of 229
+GPU preparation:
+Max work group size: 256
+Elapsed seconds: 0.063000
+Current frame: 141 of 229
+GPU preparation:
+Max work group size: 256
+Elapsed seconds: 0.064000
+Current frame: 142 of 229
+GPU preparation:
+Max work group size: 256
+Elapsed seconds: 0.064000
+Current frame: 143 of 229
+GPU preparation:
+Max work group size: 256
+Elapsed seconds: 0.063000
+Current frame: 144 of 229
+GPU preparation:
+Max work group size: 256
+Elapsed seconds: 0.064000
+Current frame: 145 of 229
+GPU preparation:
+Max work group size: 256
+Elapsed seconds: 0.063000
+Current frame: 146 of 229
+GPU preparation:
+Max work group size: 256
+Elapsed seconds: 0.063000
+Current frame: 147 of 229
+GPU preparation:
+Max work group size: 256
+Elapsed seconds: 0.064000
+Current frame: 148 of 229
+GPU preparation:
+Max work group size: 256
+Elapsed seconds: 0.064000
+Current frame: 149 of 229
+GPU preparation:
+Max work group size: 256
+Elapsed seconds: 0.063000
+Current frame: 150 of 229
+GPU preparation:
+Max work group size: 256
+Elapsed seconds: 0.064000
+Current frame: 151 of 229
+GPU preparation:
+Max work group size: 256
+Elapsed seconds: 0.063000
+Current frame: 152 of 229
+GPU preparation:
+Max work group size: 256
+Elapsed seconds: 0.064000
+Current frame: 153 of 229
+GPU preparation:
+Max work group size: 256
+Elapsed seconds: 0.064000
+Current frame: 154 of 229
+GPU preparation:
+Max work group size: 256
+Elapsed seconds: 0.065000
+Current frame: 155 of 229
+GPU preparation:
+Max work group size: 256
+Elapsed seconds: 0.063000
+Current frame: 156 of 229
+GPU preparation:
+Max work group size: 256
+Elapsed seconds: 0.064000
+Current frame: 157 of 229
+GPU preparation:
+Max work group size: 256
+Elapsed seconds: 0.064000
+Current frame: 158 of 229
+GPU preparation:
+Max work group size: 256
+Elapsed seconds: 0.064000
+Current frame: 159 of 229
+GPU preparation:
+Max work group size: 256
+Elapsed seconds: 0.065000
+Current frame: 160 of 229
+GPU preparation:
+Max work group size: 256
+Elapsed seconds: 0.064000
+Current frame: 161 of 229
+GPU preparation:
+Max work group size: 256
+Elapsed seconds: 0.064000
+Current frame: 162 of 229
+GPU preparation:
+Max work group size: 256
+Elapsed seconds: 0.065000
+Current frame: 163 of 229
+GPU preparation:
+Max work group size: 256
+Elapsed seconds: 0.064000
+Current frame: 164 of 229
+GPU preparation:
+Max work group size: 256
+Elapsed seconds: 0.065000
+Current frame: 165 of 229
+GPU preparation:
+Max work group size: 256
+Elapsed seconds: 0.063000
+Current frame: 166 of 229
+GPU preparation:
+Max work group size: 256
+Elapsed seconds: 0.063000
+Current frame: 167 of 229
+GPU preparation:
+Max work group size: 256
+Elapsed seconds: 0.062000
+Current frame: 168 of 229
+GPU preparation:
+Max work group size: 256
+Elapsed seconds: 0.064000
+Current frame: 169 of 229
+GPU preparation:
+Max work group size: 256
+Elapsed seconds: 0.063000
+Current frame: 170 of 229
+GPU preparation:
+Max work group size: 256
+Elapsed seconds: 0.064000
+Current frame: 171 of 229
+GPU preparation:
+Max work group size: 256
+Elapsed seconds: 0.064000
+Current frame: 172 of 229
+GPU preparation:
+Max work group size: 256
+Elapsed seconds: 0.063000
+Current frame: 173 of 229
+GPU preparation:
+Max work group size: 256
+Elapsed seconds: 0.064000
+Current frame: 174 of 229
+GPU preparation:
+Max work group size: 256
+Elapsed seconds: 0.064000
+Current frame: 175 of 229
+GPU preparation:
+Max work group size: 256
+Elapsed seconds: 0.064000
+Current frame: 176 of 229
+GPU preparation:
+Max work group size: 256
+Elapsed seconds: 0.064000
+Current frame: 177 of 229
+GPU preparation:
+Max work group size: 256
+Elapsed seconds: 0.064000
+Current frame: 178 of 229
+GPU preparation:
+Max work group size: 256
+Elapsed seconds: 0.063000
+Current frame: 179 of 229
+GPU preparation:
+Max work group size: 256
+Elapsed seconds: 0.063000
+Current frame: 180 of 229
+GPU preparation:
+Max work group size: 256
+Elapsed seconds: 0.064000
+Current frame: 181 of 229
+GPU preparation:
+Max work group size: 256
+Elapsed seconds: 0.063000
+Current frame: 182 of 229
+GPU preparation:
+Max work group size: 256
+Elapsed seconds: 0.063000
+Current frame: 183 of 229
+GPU preparation:
+Max work group size: 256
+Elapsed seconds: 0.064000
+Current frame: 184 of 229
+GPU preparation:
+Max work group size: 256
+Elapsed seconds: 0.065000
+Current frame: 185 of 229
+GPU preparation:
+Max work group size: 256
+Elapsed seconds: 0.065000
+Current frame: 186 of 229
+GPU preparation:
+Max work group size: 256
+Elapsed seconds: 0.063000
+Current frame: 187 of 229
+GPU preparation:
+Max work group size: 256
+Elapsed seconds: 0.063000
+Current frame: 188 of 229
+GPU preparation:
+Max work group size: 256
+Elapsed seconds: 0.063000
+Current frame: 189 of 229
+GPU preparation:
+Max work group size: 256
+Elapsed seconds: 0.063000
+Current frame: 190 of 229
+GPU preparation:
+Max work group size: 256
+Elapsed seconds: 0.063000
+Current frame: 191 of 229
+GPU preparation:
+Max work group size: 256
+Elapsed seconds: 0.064000
+Current frame: 192 of 229
+GPU preparation:
+Max work group size: 256
+Elapsed seconds: 0.063000
+Current frame: 193 of 229
+GPU preparation:
+Max work group size: 256
+Elapsed seconds: 0.064000
+Current frame: 194 of 229
+GPU preparation:
+Max work group size: 256
+Elapsed seconds: 0.063000
+Current frame: 195 of 229
+GPU preparation:
+Max work group size: 256
+Elapsed seconds: 0.064000
+Current frame: 196 of 229
+GPU preparation:
+Max work group size: 256
+Elapsed seconds: 0.063000
+Current frame: 197 of 229
+GPU preparation:
+Max work group size: 256
+Elapsed seconds: 0.063000
+Current frame: 198 of 229
+GPU preparation:
+Max work group size: 256
+Elapsed seconds: 0.063000
+Current frame: 199 of 229
+GPU preparation:
+Max work group size: 256
+Elapsed seconds: 0.063000
+Current frame: 200 of 229
+GPU preparation:
+Max work group size: 256
+Elapsed seconds: 0.064000
+Current frame: 201 of 229
+GPU preparation:
+Max work group size: 256
+Elapsed seconds: 0.063000
+Current frame: 202 of 229
+GPU preparation:
+Max work group size: 256
+Elapsed seconds: 0.065000
+Current frame: 203 of 229
+GPU preparation:
+Max work group size: 256
+Elapsed seconds: 0.064000
+Current frame: 204 of 229
+GPU preparation:
+Max work group size: 256
+Elapsed seconds: 0.063000
+Current frame: 205 of 229
+GPU preparation:
+Max work group size: 256
+Elapsed seconds: 0.064000
+Current frame: 206 of 229
+GPU preparation:
+Max work group size: 256
+Elapsed seconds: 0.064000
+Current frame: 207 of 229
+GPU preparation:
+Max work group size: 256
+Elapsed seconds: 0.063000
+Current frame: 208 of 229
+GPU preparation:
+Max work group size: 256
+Elapsed seconds: 0.063000
+Current frame: 209 of 229
+GPU preparation:
+Max work group size: 256
+Elapsed seconds: 0.064000
+Current frame: 210 of 229
+GPU preparation:
+Max work group size: 256
+Elapsed seconds: 0.063000
+Current frame: 211 of 229
+GPU preparation:
+Max work group size: 256
+Elapsed seconds: 0.064000
+Current frame: 212 of 229
+GPU preparation:
+Max work group size: 256
+Elapsed seconds: 0.063000
+Current frame: 213 of 229
+GPU preparation:
+Max work group size: 256
+Elapsed seconds: 0.064000
+Current frame: 214 of 229
+GPU preparation:
+Max work group size: 256
+Elapsed seconds: 0.063000
+Current frame: 215 of 229
+GPU preparation:
+Max work group size: 256
+Elapsed seconds: 0.064000
+Current frame: 216 of 229
+GPU preparation:
+Max work group size: 256
+Elapsed seconds: 0.064000
+Current frame: 217 of 229
+GPU preparation:
+Max work group size: 256
+Elapsed seconds: 0.066000
+Current frame: 218 of 229
+GPU preparation:
+Max work group size: 256
+Elapsed seconds: 0.064000
+Current frame: 219 of 229
+GPU preparation:
+Max work group size: 256
+Elapsed seconds: 0.064000
+Current frame: 220 of 229
+GPU preparation:
+Max work group size: 256
+Elapsed seconds: 0.064000
+Current frame: 221 of 229
+GPU preparation:
+Max work group size: 256
+Elapsed seconds: 0.063000
+Current frame: 222 of 229
+GPU preparation:
+Max work group size: 256
+Elapsed seconds: 0.063000
+Current frame: 223 of 229
+GPU preparation:
+Max work group size: 256
+Elapsed seconds: 0.063000
+Current frame: 224 of 229
+GPU preparation:
+Max work group size: 256
+Elapsed seconds: 0.063000
+Current frame: 225 of 229
+GPU preparation:
+Max work group size: 256
+Elapsed seconds: 0.063000
+Current frame: 226 of 229
+GPU preparation:
+Max work group size: 256
+Elapsed seconds: 0.064000
+Current frame: 227 of 229
+GPU preparation:
+Max work group size: 256
+Elapsed seconds: 0.063000
+Current frame: 228 of 229
+GPU preparation:
+Max work group size: 256
+Elapsed seconds: 0.063000
+Current frame: 229 of 229
+GPU preparation:
+Max work group size: 256
+Elapsed seconds: 0.063000
+Average seconds: 0.063887

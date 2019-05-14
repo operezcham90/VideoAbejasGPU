@@ -1,0 +1,33 @@
+
+Reading config file: 
+Path ALOV++: /home/hwa/
+Path result: /home/hwa/result/10-LowContrast_23
+Image dir: imagedata++/
+Annotation dir: alov300++_rectangleAnnotation_full/
+Video name: 10-LowContrast
+Video number: 23
+Max window size: 24
+Reading annotation file: 
+u0: 1246
+v0: 275
+Real window: 1556
+First frame: 44
+Last frame: 72
+
+Current frame: 45 of 72
+GPU preparation:
+Max work group size: 1024
+Number of bees: 256
+Valid result: 0.916739
+Elapsed seconds: 10.037000
+Current frame: 46 of 72
+GPU preparation:
+Max work group size: 1024
+Number of bees: 256
+Valid result: 0.903244
+Elapsed seconds: 10.099000
+Current frame: 47 of 72
+GPU preparation:
+Max work group size: 1024
+Number of bees: 256
+Error: Failed to read output array! -5

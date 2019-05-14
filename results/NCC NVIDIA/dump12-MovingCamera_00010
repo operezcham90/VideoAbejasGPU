@@ -1,0 +1,95 @@
+
+Reading config file: 
+Path ALOV++: /home/hwa/
+Path result: /home/hwa/result/12-MovingCamera_10
+Image dir: imagedata++/
+Annotation dir: alov300++_rectangleAnnotation_full/
+Video name: 12-MovingCamera
+Video number: 10
+Max window size: 24
+Reading annotation file: 
+u0: 1744
+v0: 702
+Real window: 1797
+First frame: 37
+Last frame: 50
+
+Current frame: 38 of 50
+GPU preparation:
+Max work group size: 1024
+Number of bees: 256
+Valid result: 0.951759
+Elapsed seconds: 2.174000
+Current frame: 39 of 50
+GPU preparation:
+Max work group size: 1024
+Number of bees: 256
+Valid result: 0.962097
+Elapsed seconds: 2.162000
+Current frame: 40 of 50
+GPU preparation:
+Max work group size: 1024
+Number of bees: 256
+Valid result: 0.971693
+Elapsed seconds: 2.136000
+Current frame: 41 of 50
+GPU preparation:
+Max work group size: 1024
+Number of bees: 256
+Valid result: 0.968761
+Elapsed seconds: 2.139000
+Current frame: 42 of 50
+GPU preparation:
+Max work group size: 1024
+Number of bees: 256
+Valid result: 0.983329
+Elapsed seconds: 2.145000
+Current frame: 43 of 50
+GPU preparation:
+Max work group size: 1024
+Number of bees: 256
+Valid result: 0.975272
+Elapsed seconds: 2.111000
+Current frame: 44 of 50
+GPU preparation:
+Max work group size: 1024
+Number of bees: 256
+Valid result: 0.976277
+Elapsed seconds: 2.118000
+Current frame: 45 of 50
+GPU preparation:
+Max work group size: 1024
+Number of bees: 256
+Valid result: 0.972050
+Elapsed seconds: 2.135000
+Current frame: 46 of 50
+GPU preparation:
+Max work group size: 1024
+Number of bees: 256
+Valid result: 0.976703
+Elapsed seconds: 2.127000
+Current frame: 47 of 50
+GPU preparation:
+Max work group size: 1024
+Number of bees: 256
+Valid result: 0.978143
+Elapsed seconds: 2.117000
+Current frame: 48 of 50
+GPU preparation:
+Max work group size: 1024
+Number of bees: 256
+Valid result: 0.975220
+Elapsed seconds: 2.124000
+Current frame: 49 of 50
+GPU preparation:
+Max work group size: 1024
+Number of bees: 256
+Valid result: 0.983141
+Elapsed seconds: 2.115000
+Current frame: 50 of 50
+GPU preparation:
+Max work group size: 1024
+Number of bees: 256
+Valid result: 0.980335
+Elapsed seconds: 2.124000
+Average seconds: 2.310583

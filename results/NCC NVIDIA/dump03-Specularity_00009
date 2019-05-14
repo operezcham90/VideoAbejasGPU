@@ -1,0 +1,21 @@
+
+Reading config file: 
+Path ALOV++: /home/hwa/
+Path result: /home/hwa/result/03-Specularity_9
+Image dir: imagedata++/
+Annotation dir: alov300++_rectangleAnnotation_full/
+Video name: 03-Specularity
+Video number: 9
+Max window size: 24
+Reading annotation file: 
+u0: 648
+v0: 230
+Real window: 1068
+First frame: 1
+Last frame: 390
+
+Current frame: 2 of 390
+GPU preparation:
+Max work group size: 1024
+Number of bees: 256
+Error: Failed to read output array! -5

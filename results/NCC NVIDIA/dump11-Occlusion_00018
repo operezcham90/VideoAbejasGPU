@@ -1,0 +1,141 @@
+
+Reading config file: 
+Path ALOV++: /home/hwa/
+Path result: /home/hwa/result/11-Occlusion_18
+Image dir: imagedata++/
+Annotation dir: alov300++_rectangleAnnotation_full/
+Video name: 11-Occlusion
+Video number: 18
+Max window size: 24
+Reading annotation file: 
+u0: 712
+v0: 320
+Real window: 920
+First frame: 1
+Last frame: 262
+
+Current frame: 2 of 262
+GPU preparation:
+Max work group size: 1024
+Number of bees: 256
+Valid result: 0.887462
+Elapsed seconds: 9.622000
+Current frame: 3 of 262
+GPU preparation:
+Max work group size: 1024
+Number of bees: 256
+Valid result: 0.765545
+Elapsed seconds: 9.660000
+Current frame: 4 of 262
+GPU preparation:
+Max work group size: 1024
+Number of bees: 256
+Valid result: 0.880722
+Elapsed seconds: 9.723000
+Current frame: 5 of 262
+GPU preparation:
+Max work group size: 1024
+Number of bees: 256
+Valid result: 0.895403
+Elapsed seconds: 9.769000
+Current frame: 6 of 262
+GPU preparation:
+Max work group size: 1024
+Number of bees: 256
+Valid result: 0.886610
+Elapsed seconds: 9.682000
+Current frame: 7 of 262
+GPU preparation:
+Max work group size: 1024
+Number of bees: 256
+Valid result: 0.759963
+Elapsed seconds: 9.750000
+Current frame: 8 of 262
+GPU preparation:
+Max work group size: 1024
+Number of bees: 256
+Valid result: 0.850715
+Elapsed seconds: 9.742000
+Current frame: 9 of 262
+GPU preparation:
+Max work group size: 1024
+Number of bees: 256
+Valid result: 0.877015
+Elapsed seconds: 9.755000
+Current frame: 10 of 262
+GPU preparation:
+Max work group size: 1024
+Number of bees: 256
+Valid result: 0.899781
+Elapsed seconds: 9.666000
+Current frame: 11 of 262
+GPU preparation:
+Max work group size: 1024
+Number of bees: 256
+Valid result: 0.819124
+Elapsed seconds: 9.596000
+Current frame: 12 of 262
+GPU preparation:
+Max work group size: 1024
+Number of bees: 256
+Valid result: 0.878922
+Elapsed seconds: 9.704000
+Current frame: 13 of 262
+GPU preparation:
+Max work group size: 1024
+Number of bees: 256
+Valid result: 0.875820
+Elapsed seconds: 9.733000
+Current frame: 14 of 262
+GPU preparation:
+Max work group size: 1024
+Number of bees: 256
+Valid result: 0.857208
+Elapsed seconds: 9.629000
+Current frame: 15 of 262
+GPU preparation:
+Max work group size: 1024
+Number of bees: 256
+Valid result: 0.734248
+Elapsed seconds: 9.796000
+Current frame: 16 of 262
+GPU preparation:
+Max work group size: 1024
+Number of bees: 256
+Valid result: 0.829656
+Elapsed seconds: 9.779000
+Current frame: 17 of 262
+GPU preparation:
+Max work group size: 1024
+Number of bees: 256
+Valid result: 0.832006
+Elapsed seconds: 9.607000
+Current frame: 18 of 262
+GPU preparation:
+Max work group size: 1024
+Number of bees: 256
+Valid result: 0.849291
+Elapsed seconds: 9.753000
+Current frame: 19 of 262
+GPU preparation:
+Max work group size: 1024
+Number of bees: 256
+Valid result: 0.749075
+Elapsed seconds: 9.754000
+Current frame: 20 of 262
+GPU preparation:
+Max work group size: 1024
+Number of bees: 256
+Valid result: 0.853472
+Elapsed seconds: 9.681000
+Current frame: 21 of 262
+GPU preparation:
+Max work group size: 1024
+Number of bees: 256
+Valid result: 0.818427
+Elapsed seconds: 9.746000
+Current frame: 22 of 262
+GPU preparation:
+Max work group size: 1024
+Number of bees: 256
+Error: Failed to read output array! -5

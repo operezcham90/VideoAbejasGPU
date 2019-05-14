@@ -1,0 +1,27 @@
+
+Reading config file: 
+Path ALOV++: /home/hwa/
+Path result: /home/hwa/result/12-MovingCamera_2
+Image dir: imagedata++/
+Annotation dir: alov300++_rectangleAnnotation_full/
+Video name: 12-MovingCamera
+Video number: 2
+Max window size: 24
+Reading annotation file: 
+u0: 869
+v0: 174
+Real window: 1164
+First frame: 26
+Last frame: 141
+
+Current frame: 27 of 141
+GPU preparation:
+Max work group size: 1024
+Number of bees: 256
+Valid result: 0.691695
+Elapsed seconds: 10.271000
+Current frame: 28 of 141
+GPU preparation:
+Max work group size: 1024
+Number of bees: 256
+Error: Failed to read output array! -5

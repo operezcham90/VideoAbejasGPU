@@ -1,0 +1,21 @@
+
+Reading config file: 
+Path ALOV++: /home/hwa/
+Path result: /home/hwa/result/11-Occlusion_16
+Image dir: imagedata++/
+Annotation dir: alov300++_rectangleAnnotation_full/
+Video name: 11-Occlusion
+Video number: 16
+Max window size: 24
+Reading annotation file: 
+u0: 792
+v0: 35
+Real window: 1223
+First frame: 1
+Last frame: 340
+
+Current frame: 2 of 340
+GPU preparation:
+Max work group size: 1024
+Number of bees: 256
+Error: Failed to read output array! -5

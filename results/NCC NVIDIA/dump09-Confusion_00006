@@ -1,0 +1,21 @@
+
+Reading config file: 
+Path ALOV++: /home/hwa/
+Path result: /home/hwa/result/09-Confusion_6
+Image dir: imagedata++/
+Annotation dir: alov300++_rectangleAnnotation_full/
+Video name: 09-Confusion
+Video number: 6
+Max window size: 24
+Reading annotation file: 
+u0: 1104
+v0: 677
+Real window: 1543
+First frame: 1
+Last frame: 91
+
+Current frame: 2 of 91
+GPU preparation:
+Max work group size: 1024
+Number of bees: 256
+Error: Failed to read output array! -5

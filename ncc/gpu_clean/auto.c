@@ -44,7 +44,7 @@ int main(int argc, char** argv) {
 	string ann = "ann_dir:\nalov300++_rectangleAnnotation_full/\n\n";
 	string vid = "vid_name:\n";
 	string num = "vid_num:\n";
-	string all = "max_window:\n24.0\n\ncores_per_bee:\n4\n\nmax_gen:\n4\n\neta_m:\n25\n\neta_c:\n2\n\nrate_alpha_e:\n0.6\n\nrate_beta_e:\n0.1\n\nrate_gamma_e:\n0.3\n\nrate_alpha_r:\n0.6\n\nrate_beta_r:\n0.3\n\nrate_gamma_r:\n0.1";
+	string all = "max_window:\n24.0\n\ncores_per_bee:\n4\n\nmax_gen:\n6\n\neta_m:\n25\n\neta_c:\n2\n\nrate_alpha_e:\n0.6\n\nrate_beta_e:\n0.1\n\nrate_gamma_e:\n0.3\n\nrate_alpha_r:\n0.6\n\nrate_beta_r:\n0.3\n\nrate_gamma_r:\n0.1";
 
 	for (int i = 0; i < 14; i++) {
 		for (int j = 1; j <= videos[i]; j++) {

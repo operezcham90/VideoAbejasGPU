@@ -18,6 +18,7 @@
 
 // GPU configuration
 std::string kernel_file = "fitness_kernel.c";
+std::string kernel_file_bee = "fitness_kernel_bee.c";
 char *kernel_src;
 long kernel_size;
 int err;
@@ -47,7 +48,7 @@ int honeybee = 0;
 // Honeybee configuration
 int cores_per_bee;
 int num_bees;
-int max_gen;
+short max_gen;
 int eta_m;
 int eta_c;
 float rate_alpha_e;
@@ -56,6 +57,12 @@ float rate_gamma_e;
 float rate_alpha_r;
 float rate_beta_r;
 float rate_gamma_r;
+float _rate_alpha_e;
+float _rate_beta_e;
+float _rate_gamma_e;
+float _rate_alpha_r;
+float _rate_beta_r;
+float _rate_gamma_r;
 CvRNG rng = cvRNG(0xffffffff);
 
 // Get beta for SBX crossover
@@ -110,17 +117,17 @@ void read_config() {
 	in >> trash;
 	in >> eta_c;
 	in >> trash;
-	in >> rate_alpha_e;
+	in >> _rate_alpha_e;
 	in >> trash;
-	in >> rate_beta_e;
+	in >> _rate_beta_e;
 	in >> trash;
-	in >> rate_gamma_e;
+	in >> _rate_gamma_e;
 	in >> trash;
-	in >> rate_alpha_r;
+	in >> _rate_alpha_r;
 	in >> trash;
-	in >> rate_beta_r;
+	in >> _rate_beta_r;
 	in >> trash;
-	in >> rate_gamma_r;
+	in >> _rate_gamma_r;
 	in >> trash;
 	in >> path_result;
 	in.close();
@@ -227,16 +234,17 @@ void set_gpu() {
 
 	// Get actual subpopulation size
 	num_bees = max_work_group_size / cores_per_bee;
-	//printf("Number of bees: %d\n", num_bees);
-	rate_alpha_e *= num_bees;
-	rate_beta_e *= num_bees;
-	rate_gamma_e *= num_bees;
+	printf("Number of bees: %d\n", num_bees);
+	rate_alpha_e = num_bees * _rate_alpha_e;
+	rate_beta_e = num_bees * _rate_beta_e;
+	rate_gamma_e = num_bees * _rate_gamma_e;
 	rate_alpha_e = round(rate_alpha_e);
 	rate_beta_e = round(rate_beta_e);
 	rate_gamma_e = round(rate_gamma_e);
-	rate_alpha_r *= num_bees;
-	rate_beta_r *= num_bees;
-	rate_gamma_r *= num_bees;
+
+	rate_alpha_r = num_bees * _rate_alpha_r;
+	rate_beta_r = num_bees * _rate_beta_r;
+	rate_gamma_r = num_bees * _rate_gamma_r;
 	rate_alpha_r = round(rate_alpha_r);
 	rate_beta_r = round(rate_beta_r);
 	rate_gamma_r = round(rate_gamma_r);
@@ -260,12 +268,14 @@ void set_gpu() {
 		rate_alpha_r++;
 		rate_beta_r--;
 	}
-	/*printf("Alpha e: %f\n", rate_alpha_e);
-	printf("Beta e: %f\n", rate_beta_e);
-	printf("Gamma e: %f\n", rate_gamma_e);
-	printf("Alpha r: %f\n", rate_alpha_r);
-	printf("Beta r: %f\n", rate_beta_r);
-	printf("Gamma r: %f\n\n", rate_gamma_r);*/
+	if (honeybee == 1) {
+		printf("Alpha e: %f\n", rate_alpha_e);
+		printf("Beta e: %f\n", rate_beta_e);
+		printf("Gamma e: %f\n", rate_gamma_e);
+		printf("Alpha r: %f\n", rate_alpha_r);
+		printf("Beta r: %f\n", rate_beta_r);
+		printf("Gamma r: %f\n\n", rate_gamma_r);
+	}
 
 	// Create a compute context
 	context = clCreateContext(0, 1, &device_id, NULL, NULL, &err);
@@ -430,7 +440,10 @@ int main(int argc, char** argv) {
 	read_config();
 	
 	// Read kernel file
-	kernel_size = read_kernel(kernel_file, &kernel_src);
+	if (honeybee == 0)
+		kernel_size = read_kernel(kernel_file, &kernel_src);
+	else
+		kernel_size = read_kernel(kernel_file_bee, &kernel_src);
 
 	// Read annotation file
 	read_ann();
@@ -465,6 +478,33 @@ for (int current = initial_frame + 1; current <= last_frame; current++) {
 
 	gettimeofday(&begin, NULL);
 
+	// Get NCC
+	int mx = frame1.cols;
+	int my = frame1.rows;
+	int nx = w0;
+	int ny = h0;
+	float * gamma = 
+		(float*)std::malloc(((mx - nx) * (my - ny)) * sizeof(float));
+	for (int x = 0; x < (mx - nx); x++) {
+		for (int y = 0; y < (my - ny); y++) {
+			gamma[x + y * (mx - nx)] = 0.0f;
+		}
+	}
+
+	// Pregenerated random numbers
+	unsigned int *rand1 = (unsigned int*)std::malloc((mx * my) * sizeof(int));
+	float *rand2 = (float*)std::malloc((mx * my) * sizeof(float));
+	float *rand3 = (float*)std::malloc((mx * my) * sizeof(float));
+	float *rand4 = (float*)std::malloc((mx * my) * sizeof(float));
+
+	// Generate new random numbers
+	for (int i = 0; i < mx * my; i++) {
+		rand1[i] = cvRandInt(&rng);
+		rand2[i] = cvRandReal(&rng);
+		rand3[i] = get_beta(rand2[i], eta_c);
+		rand4[i] = get_delta(rand2[i], eta_m);
+	}
+
 	// filter
 	float * frame1_gray = 
 		(float*)std::malloc((frame1.cols * frame1.rows) * sizeof(float));
@@ -489,26 +529,33 @@ for (int current = initial_frame + 1; current <= last_frame; current++) {
 		}
 	}
 
-	// Get NCC
-	int mx = frame1.cols;
-	int my = frame1.rows;
-	int nx = w0;
-	int ny = h0;
-	float * gamma = 
-		(float*)std::malloc(((mx - nx) * (my - ny)) * sizeof(float));
-
 	// AMD recomends multiples of 64
-	localWorkSize[0] = 16;
-	localWorkSize[1] = 16;
+	if (honeybee == 0) {
+		localWorkSize[0] = 16;
+		localWorkSize[1] = 16;
+	} else {
+		localWorkSize[0] = max_work_group_size;
+		localWorkSize[1] = 1;
+	}
 
 	// Only 1 local work group to allow coordination
-	globalWorkSize[0] = (int)(localWorkSize[0] *
-		ceil((mx - nx) / (float)(localWorkSize[0])));
-	globalWorkSize[1] = (int)(localWorkSize[0] *
-		ceil((my - ny) / (float)(localWorkSize[0])));
+	if (honeybee == 0) {
+		globalWorkSize[0] = (int)(localWorkSize[0] *
+			ceil((mx - nx) / (float)(localWorkSize[0])));
+		globalWorkSize[1] = (int)(localWorkSize[0] *
+			ceil((my - ny) / (float)(localWorkSize[0])));
+	} else {
+		// Only 1 local work group to allow coordination
+		globalWorkSize[0] = localWorkSize[0];
+		globalWorkSize[1] = localWorkSize[1];
+	}
 
 	// OpenCL device memory
-	cl_mem d_frame1, d_frame2, d_gamma;
+	cl_mem d_frame1, d_frame2, d_gamma, d_rand1, d_rand2, d_rand3, d_rand4,
+		d_mu_e_bees, d_mu_e_obj, d_lambda_e_bees, d_lambda_e_obj,
+		d_mu_lambda_bees, d_mu_lambda_obj, d_mu_lambda_order,
+		d_mu_r_bees, d_mu_r_obj, d_lambda_r_bees, d_lambda_r_obj, 
+		d_temp;
 
 	// Allocate GPU memory
 	d_frame1 = clCreateBuffer(context, CL_MEM_READ_WRITE | 
@@ -517,6 +564,48 @@ for (int current = initial_frame + 1; current <= last_frame; current++) {
 		CL_MEM_COPY_HOST_PTR, (mx * my) * sizeof(float), frame2_gray, &err);
 	d_gamma = clCreateBuffer(context, CL_MEM_READ_WRITE |
 		CL_MEM_COPY_HOST_PTR, ((mx - nx) * (my - ny)) * sizeof(float), gamma, &err);
+	if (honeybee == 1) {
+		// Random numbers
+		d_rand1 = clCreateBuffer(context, CL_MEM_READ_WRITE |
+			CL_MEM_COPY_HOST_PTR, (mx * my) * sizeof(int), rand1, &err);
+		d_rand2 = clCreateBuffer(context, CL_MEM_READ_WRITE |
+			CL_MEM_COPY_HOST_PTR, (mx * my) * sizeof(float), rand2, &err);
+		d_rand3 = clCreateBuffer(context, CL_MEM_READ_WRITE |
+			CL_MEM_COPY_HOST_PTR, (mx * my) * sizeof(float), rand3, &err);
+		d_rand4 = clCreateBuffer(context, CL_MEM_READ_WRITE |
+			CL_MEM_COPY_HOST_PTR, (mx * my) * sizeof(float), rand4, &err);
+
+		// Bees
+		d_mu_e_bees = clCreateBuffer(context, CL_MEM_READ_WRITE,
+			num_bees * 2 * sizeof(float), NULL, &err);
+		d_mu_e_obj = clCreateBuffer(context, CL_MEM_READ_WRITE,
+			num_bees * sizeof(float), NULL, &err);
+		d_lambda_e_bees = clCreateBuffer(context, CL_MEM_READ_WRITE,
+			num_bees * 2 * sizeof(float), NULL, &err);
+		d_lambda_e_obj = clCreateBuffer(context, CL_MEM_READ_WRITE,
+			num_bees * sizeof(float), NULL, &err);
+
+		// Mu + lambda bees, double size to order using merge sort
+		d_mu_lambda_bees = clCreateBuffer(context, CL_MEM_READ_WRITE,
+			 num_bees * 2 * sizeof(float) * 2 * 2, NULL, &err);
+		d_mu_lambda_obj = clCreateBuffer(context, CL_MEM_READ_WRITE,
+			num_bees * 2 * sizeof(float) * 2, NULL, &err);
+		d_mu_lambda_order = clCreateBuffer(context, CL_MEM_READ_WRITE,
+			num_bees * 2 * sizeof(float) * 2, NULL, &err);
+
+		// Bees
+		d_mu_r_bees = clCreateBuffer(context, CL_MEM_READ_WRITE,
+			num_bees * 2 * sizeof(float), NULL, &err);
+		d_mu_r_obj = clCreateBuffer(context, CL_MEM_READ_WRITE,
+			num_bees * sizeof(float), NULL, &err);
+		d_lambda_r_bees = clCreateBuffer(context, CL_MEM_READ_WRITE,
+			num_bees * 2 * sizeof(float), NULL, &err);
+		d_lambda_r_obj = clCreateBuffer(context, CL_MEM_READ_WRITE,
+			num_bees * sizeof(float), NULL, &err);
+
+		d_temp = clCreateBuffer(context, CL_MEM_READ_WRITE,
+			2 * num_bees * sizeof(short), NULL, &err);
+	}
 	// Check correct allocation
 	if (!d_frame1 || !d_frame2 || !d_gamma) {
 		printf("Error: Failed to allocate device memory!\n");
@@ -533,6 +622,36 @@ for (int current = initial_frame + 1; current <= last_frame; current++) {
 	err |= clSetKernelArg(kernel, 6, sizeof(int), (void *)&ny);
 	err |= clSetKernelArg(kernel, 7, sizeof(int), (void *)&mx);
 	err |= clSetKernelArg(kernel, 8, sizeof(int), (void *)&my);
+	if (honeybee == 1) {
+		err |= clSetKernelArg(kernel, 9, sizeof(cl_mem), (void *)&d_rand1);
+		err |= clSetKernelArg(kernel, 10, sizeof(cl_mem), (void *)&d_rand2);
+		err |= clSetKernelArg(kernel, 11, sizeof(cl_mem), (void *)&d_rand3);
+		err |= clSetKernelArg(kernel, 12, sizeof(cl_mem), (void *)&d_rand4);
+
+		err |= clSetKernelArg(kernel, 13, sizeof(short), (void *)&max_gen);
+		err |= clSetKernelArg(kernel, 14, sizeof(float), (void *)&rate_beta_e);
+		err |= clSetKernelArg(kernel, 15, sizeof(float), (void *)&rate_alpha_e);
+		err |= clSetKernelArg(kernel, 16, sizeof(float), (void *)&rate_gamma_e);
+		err |= clSetKernelArg(kernel, 17, sizeof(float), (void *)&rate_beta_r);
+		err |= clSetKernelArg(kernel, 18, sizeof(float), (void *)&rate_alpha_r);
+		err |= clSetKernelArg(kernel, 19, sizeof(float), (void *)&rate_gamma_r);
+
+		err |= clSetKernelArg(kernel, 20, sizeof(cl_mem), (void *)&d_mu_e_bees);
+		err |= clSetKernelArg(kernel, 21, sizeof(cl_mem), (void *)&d_mu_e_obj);
+		err |= clSetKernelArg(kernel, 22, sizeof(cl_mem), (void *)&d_lambda_e_bees);
+		err |= clSetKernelArg(kernel, 23, sizeof(cl_mem), (void *)&d_lambda_e_obj);
+
+		err |= clSetKernelArg(kernel, 24, sizeof(cl_mem), (void *)&d_mu_lambda_bees);
+		err |= clSetKernelArg(kernel, 25, sizeof(cl_mem), (void *)&d_mu_lambda_obj);
+		err |= clSetKernelArg(kernel, 26, sizeof(cl_mem), (void *)&d_mu_lambda_order);
+
+		err |= clSetKernelArg(kernel, 27, sizeof(cl_mem), (void *)&d_mu_r_bees);
+		err |= clSetKernelArg(kernel, 28, sizeof(cl_mem), (void *)&d_mu_r_obj);
+		err |= clSetKernelArg(kernel, 29, sizeof(cl_mem), (void *)&d_lambda_r_bees);
+		err |= clSetKernelArg(kernel, 30, sizeof(cl_mem), (void *)&d_lambda_r_obj);
+
+		err |= clSetKernelArg(kernel, 31, sizeof(cl_mem), (void *)&d_temp);
+	}
 	if (err != CL_SUCCESS) {
 		printf("Error: Failed to set kernel arguments! %d\n", err);
 		exit(1);
@@ -557,11 +676,17 @@ for (int current = initial_frame + 1; current <= last_frame; current++) {
 	// find the best gamma
 	float maxGamma = gamma[0];
 	int maxI = 0;
+	int todos = 0;
 	for (int i = 1; i < (mx - nx) * (my - ny); i++) {
 		if (gamma[i] > maxGamma) {
 			maxGamma = gamma[i];
 			maxI = i;
+			if (gamma[i] != -100.00f)
+				todos = 1;
 		}
+	}
+	if (todos == 1) {
+		printf("Valid result: %f\n", maxGamma);
 	}
 
 	// new u0,v0
@@ -579,6 +704,28 @@ for (int current = initial_frame + 1; current <= last_frame; current++) {
 	free(frame1_gray);
 	free(frame2_gray);
 	free(gamma);
+	if (honeybee == 1) {
+		free(rand1);
+		free(rand2);
+		free(rand3);
+		free(rand4);
+		clReleaseMemObject(d_rand1);
+		clReleaseMemObject(d_rand2);
+		clReleaseMemObject(d_rand3);
+		clReleaseMemObject(d_rand4);
+		clReleaseMemObject(d_mu_e_bees);
+		clReleaseMemObject(d_mu_e_obj);
+		clReleaseMemObject(d_lambda_e_bees);
+		clReleaseMemObject(d_lambda_e_obj);
+		clReleaseMemObject(d_mu_lambda_bees);
+		clReleaseMemObject(d_mu_lambda_obj);
+		clReleaseMemObject(d_mu_lambda_order);
+		clReleaseMemObject(d_mu_r_bees);
+		clReleaseMemObject(d_mu_r_obj);
+		clReleaseMemObject(d_lambda_r_bees);
+		clReleaseMemObject(d_lambda_r_obj);
+		clReleaseMemObject(d_temp);
+	}
 
 	gettimeofday(&end, NULL);
 	long int beginl = begin.tv_sec * 1000 + begin.tv_usec / 1000;
@@ -598,17 +745,17 @@ result_file.close();
 	// rest every 100 frames
 	if ((current - initial_frame) % 100 == 0 && resting == 1) {
 		if (avg_time /= current - initial_frame > 1.5) {
-		printf("Resting...\n");
-		gettimeofday(&begin, NULL);
-		while(true) {
-			gettimeofday(&end, NULL);
-			long int beginl = begin.tv_sec * 1000 + begin.tv_usec / 1000;
-			long int endl = end.tv_sec * 1000 + end.tv_usec / 1000;
-			double elapsed_secs = double(endl - beginl) / 1000;
-			if (elapsed_secs > 300) {
-				break;
+			printf("Resting...\n");
+			gettimeofday(&begin, NULL);
+			while(true) {
+				gettimeofday(&end, NULL);
+				long int beginl = begin.tv_sec * 1000 + begin.tv_usec / 1000;
+				long int endl = end.tv_sec * 1000 + end.tv_usec / 1000;
+				double elapsed_secs = double(endl - beginl) / 1000;
+				if (elapsed_secs > 300) {
+					break;
+				}
 			}
-		}
 		}
 	}
 }
