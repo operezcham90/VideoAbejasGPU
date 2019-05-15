@@ -3,7 +3,7 @@ var jnd = 1;
 
 function load(cat, vid) {
     var gt_path = "./alov300++GT_txtFiles/alov300++_rectangleAnnotation_full/";
-    var t_path = "./res/NCC AMD BEE 4/";
+    var t_path = "./NCC AMD BEE 10/";;
     var vidz = "" + vid;
     while (vidz.length < 5) {
         vidz = "0" + vidz;

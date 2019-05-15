@@ -20,7 +20,7 @@ var videos = [
 ];
 
 function load(cat, vid) {
-    var t_path = "./res/NCC AMD BEE 4/";
+    var t_path = "./NCC AMD BEE 10/";
     var vidz = "" + vid;
     while (vidz.length < 5) {
         vidz = "0" + vidz;
