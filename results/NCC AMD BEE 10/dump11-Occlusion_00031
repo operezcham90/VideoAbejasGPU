@@ -1,0 +1,1517 @@
+
+Reading config file: 
+Path ALOV++: /home/lcd/
+Path result: /home/lcd/result/gen10/11-Occlusion_31
+Image dir: imagedata++/
+Annotation dir: alov300++_rectangleAnnotation_full/
+Video name: 11-Occlusion
+Video number: 31
+Max window size: 24
+Cores per bee: 4
+Max generation: 10
+Eta for mutation: 25
+Eta for crossover: 2
+Alpha for exploration: 0
+Beta for exploration: 0
+Gamma for exploration: 0
+Alpha for foraging: 0
+Beta for foraging: 0
+Gamma for foraging: 0
+Max window / sqrt(cores per bee): 12 (Should be integer)
+
+Reading annotation file: 
+u0: 231
+v0: 318
+Real window: 436
+First frame: 20
+Last frame: 144
+
+Current frame: 21 of 144
+GPU preparation:
+Max work group size: 256
+Number of bees: 64
+Alpha e: 39.000000
+Beta e: 6.000000
+Gamma e: 19.000000
+Alpha r: 40.000000
+Beta r: 18.000000
+Gamma r: 6.000000
+
+Elapsed seconds: 0.504000
+Current frame: 22 of 144
+GPU preparation:
+Max work group size: 256
+Number of bees: 64
+Alpha e: 39.000000
+Beta e: 6.000000
+Gamma e: 19.000000
+Alpha r: 40.000000
+Beta r: 18.000000
+Gamma r: 6.000000
+
+Elapsed seconds: 0.509000
+Current frame: 23 of 144
+GPU preparation:
+Max work group size: 256
+Number of bees: 64
+Alpha e: 39.000000
+Beta e: 6.000000
+Gamma e: 19.000000
+Alpha r: 40.000000
+Beta r: 18.000000
+Gamma r: 6.000000
+
+Elapsed seconds: 0.521000
+Current frame: 24 of 144
+GPU preparation:
+Max work group size: 256
+Number of bees: 64
+Alpha e: 39.000000
+Beta e: 6.000000
+Gamma e: 19.000000
+Alpha r: 40.000000
+Beta r: 18.000000
+Gamma r: 6.000000
+
+Elapsed seconds: 0.497000
+Current frame: 25 of 144
+GPU preparation:
+Max work group size: 256
+Number of bees: 64
+Alpha e: 39.000000
+Beta e: 6.000000
+Gamma e: 19.000000
+Alpha r: 40.000000
+Beta r: 18.000000
+Gamma r: 6.000000
+
+Elapsed seconds: 0.499000
+Current frame: 26 of 144
+GPU preparation:
+Max work group size: 256
+Number of bees: 64
+Alpha e: 39.000000
+Beta e: 6.000000
+Gamma e: 19.000000
+Alpha r: 40.000000
+Beta r: 18.000000
+Gamma r: 6.000000
+
+Elapsed seconds: 0.500000
+Current frame: 27 of 144
+GPU preparation:
+Max work group size: 256
+Number of bees: 64
+Alpha e: 39.000000
+Beta e: 6.000000
+Gamma e: 19.000000
+Alpha r: 40.000000
+Beta r: 18.000000
+Gamma r: 6.000000
+
+Elapsed seconds: 0.500000
+Current frame: 28 of 144
+GPU preparation:
+Max work group size: 256
+Number of bees: 64
+Alpha e: 39.000000
+Beta e: 6.000000
+Gamma e: 19.000000
+Alpha r: 40.000000
+Beta r: 18.000000
+Gamma r: 6.000000
+
+Elapsed seconds: 0.498000
+Current frame: 29 of 144
+GPU preparation:
+Max work group size: 256
+Number of bees: 64
+Alpha e: 39.000000
+Beta e: 6.000000
+Gamma e: 19.000000
+Alpha r: 40.000000
+Beta r: 18.000000
+Gamma r: 6.000000
+
+Elapsed seconds: 0.502000
+Current frame: 30 of 144
+GPU preparation:
+Max work group size: 256
+Number of bees: 64
+Alpha e: 39.000000
+Beta e: 6.000000
+Gamma e: 19.000000
+Alpha r: 40.000000
+Beta r: 18.000000
+Gamma r: 6.000000
+
+Elapsed seconds: 0.497000
+Current frame: 31 of 144
+GPU preparation:
+Max work group size: 256
+Number of bees: 64
+Alpha e: 39.000000
+Beta e: 6.000000
+Gamma e: 19.000000
+Alpha r: 40.000000
+Beta r: 18.000000
+Gamma r: 6.000000
+
+Elapsed seconds: 0.497000
+Current frame: 32 of 144
+GPU preparation:
+Max work group size: 256
+Number of bees: 64
+Alpha e: 39.000000
+Beta e: 6.000000
+Gamma e: 19.000000
+Alpha r: 40.000000
+Beta r: 18.000000
+Gamma r: 6.000000
+
+Elapsed seconds: 0.499000
+Current frame: 33 of 144
+GPU preparation:
+Max work group size: 256
+Number of bees: 64
+Alpha e: 39.000000
+Beta e: 6.000000
+Gamma e: 19.000000
+Alpha r: 40.000000
+Beta r: 18.000000
+Gamma r: 6.000000
+
+Elapsed seconds: 0.502000
+Current frame: 34 of 144
+GPU preparation:
+Max work group size: 256
+Number of bees: 64
+Alpha e: 39.000000
+Beta e: 6.000000
+Gamma e: 19.000000
+Alpha r: 40.000000
+Beta r: 18.000000
+Gamma r: 6.000000
+
+Elapsed seconds: 0.499000
+Current frame: 35 of 144
+GPU preparation:
+Max work group size: 256
+Number of bees: 64
+Alpha e: 39.000000
+Beta e: 6.000000
+Gamma e: 19.000000
+Alpha r: 40.000000
+Beta r: 18.000000
+Gamma r: 6.000000
+
+Elapsed seconds: 0.500000
+Current frame: 36 of 144
+GPU preparation:
+Max work group size: 256
+Number of bees: 64
+Alpha e: 39.000000
+Beta e: 6.000000
+Gamma e: 19.000000
+Alpha r: 40.000000
+Beta r: 18.000000
+Gamma r: 6.000000
+
+Elapsed seconds: 0.499000
+Current frame: 37 of 144
+GPU preparation:
+Max work group size: 256
+Number of bees: 64
+Alpha e: 39.000000
+Beta e: 6.000000
+Gamma e: 19.000000
+Alpha r: 40.000000
+Beta r: 18.000000
+Gamma r: 6.000000
+
+Elapsed seconds: 0.505000
+Current frame: 38 of 144
+GPU preparation:
+Max work group size: 256
+Number of bees: 64
+Alpha e: 39.000000
+Beta e: 6.000000
+Gamma e: 19.000000
+Alpha r: 40.000000
+Beta r: 18.000000
+Gamma r: 6.000000
+
+Elapsed seconds: 0.506000
+Current frame: 39 of 144
+GPU preparation:
+Max work group size: 256
+Number of bees: 64
+Alpha e: 39.000000
+Beta e: 6.000000
+Gamma e: 19.000000
+Alpha r: 40.000000
+Beta r: 18.000000
+Gamma r: 6.000000
+
+Elapsed seconds: 0.501000
+Current frame: 40 of 144
+GPU preparation:
+Max work group size: 256
+Number of bees: 64
+Alpha e: 39.000000
+Beta e: 6.000000
+Gamma e: 19.000000
+Alpha r: 40.000000
+Beta r: 18.000000
+Gamma r: 6.000000
+
+Elapsed seconds: 0.504000
+Current frame: 41 of 144
+GPU preparation:
+Max work group size: 256
+Number of bees: 64
+Alpha e: 39.000000
+Beta e: 6.000000
+Gamma e: 19.000000
+Alpha r: 40.000000
+Beta r: 18.000000
+Gamma r: 6.000000
+
+Elapsed seconds: 0.503000
+Current frame: 42 of 144
+GPU preparation:
+Max work group size: 256
+Number of bees: 64
+Alpha e: 39.000000
+Beta e: 6.000000
+Gamma e: 19.000000
+Alpha r: 40.000000
+Beta r: 18.000000
+Gamma r: 6.000000
+
+Elapsed seconds: 0.500000
+Current frame: 43 of 144
+GPU preparation:
+Max work group size: 256
+Number of bees: 64
+Alpha e: 39.000000
+Beta e: 6.000000
+Gamma e: 19.000000
+Alpha r: 40.000000
+Beta r: 18.000000
+Gamma r: 6.000000
+
+Elapsed seconds: 0.501000
+Current frame: 44 of 144
+GPU preparation:
+Max work group size: 256
+Number of bees: 64
+Alpha e: 39.000000
+Beta e: 6.000000
+Gamma e: 19.000000
+Alpha r: 40.000000
+Beta r: 18.000000
+Gamma r: 6.000000
+
+Elapsed seconds: 0.504000
+Current frame: 45 of 144
+GPU preparation:
+Max work group size: 256
+Number of bees: 64
+Alpha e: 39.000000
+Beta e: 6.000000
+Gamma e: 19.000000
+Alpha r: 40.000000
+Beta r: 18.000000
+Gamma r: 6.000000
+
+Elapsed seconds: 0.502000
+Current frame: 46 of 144
+GPU preparation:
+Max work group size: 256
+Number of bees: 64
+Alpha e: 39.000000
+Beta e: 6.000000
+Gamma e: 19.000000
+Alpha r: 40.000000
+Beta r: 18.000000
+Gamma r: 6.000000
+
+Elapsed seconds: 0.505000
+Current frame: 47 of 144
+GPU preparation:
+Max work group size: 256
+Number of bees: 64
+Alpha e: 39.000000
+Beta e: 6.000000
+Gamma e: 19.000000
+Alpha r: 40.000000
+Beta r: 18.000000
+Gamma r: 6.000000
+
+Elapsed seconds: 0.505000
+Current frame: 48 of 144
+GPU preparation:
+Max work group size: 256
+Number of bees: 64
+Alpha e: 39.000000
+Beta e: 6.000000
+Gamma e: 19.000000
+Alpha r: 40.000000
+Beta r: 18.000000
+Gamma r: 6.000000
+
+Elapsed seconds: 0.507000
+Current frame: 49 of 144
+GPU preparation:
+Max work group size: 256
+Number of bees: 64
+Alpha e: 39.000000
+Beta e: 6.000000
+Gamma e: 19.000000
+Alpha r: 40.000000
+Beta r: 18.000000
+Gamma r: 6.000000
+
+Elapsed seconds: 0.506000
+Current frame: 50 of 144
+GPU preparation:
+Max work group size: 256
+Number of bees: 64
+Alpha e: 39.000000
+Beta e: 6.000000
+Gamma e: 19.000000
+Alpha r: 40.000000
+Beta r: 18.000000
+Gamma r: 6.000000
+
+Elapsed seconds: 0.510000
+Current frame: 51 of 144
+GPU preparation:
+Max work group size: 256
+Number of bees: 64
+Alpha e: 39.000000
+Beta e: 6.000000
+Gamma e: 19.000000
+Alpha r: 40.000000
+Beta r: 18.000000
+Gamma r: 6.000000
+
+Elapsed seconds: 0.502000
+Current frame: 52 of 144
+GPU preparation:
+Max work group size: 256
+Number of bees: 64
+Alpha e: 39.000000
+Beta e: 6.000000
+Gamma e: 19.000000
+Alpha r: 40.000000
+Beta r: 18.000000
+Gamma r: 6.000000
+
+Elapsed seconds: 0.495000
+Current frame: 53 of 144
+GPU preparation:
+Max work group size: 256
+Number of bees: 64
+Alpha e: 39.000000
+Beta e: 6.000000
+Gamma e: 19.000000
+Alpha r: 40.000000
+Beta r: 18.000000
+Gamma r: 6.000000
+
+Elapsed seconds: 0.506000
+Current frame: 54 of 144
+GPU preparation:
+Max work group size: 256
+Number of bees: 64
+Alpha e: 39.000000
+Beta e: 6.000000
+Gamma e: 19.000000
+Alpha r: 40.000000
+Beta r: 18.000000
+Gamma r: 6.000000
+
+Elapsed seconds: 0.499000
+Current frame: 55 of 144
+GPU preparation:
+Max work group size: 256
+Number of bees: 64
+Alpha e: 39.000000
+Beta e: 6.000000
+Gamma e: 19.000000
+Alpha r: 40.000000
+Beta r: 18.000000
+Gamma r: 6.000000
+
+Elapsed seconds: 0.500000
+Current frame: 56 of 144
+GPU preparation:
+Max work group size: 256
+Number of bees: 64
+Alpha e: 39.000000
+Beta e: 6.000000
+Gamma e: 19.000000
+Alpha r: 40.000000
+Beta r: 18.000000
+Gamma r: 6.000000
+
+Elapsed seconds: 0.499000
+Current frame: 57 of 144
+GPU preparation:
+Max work group size: 256
+Number of bees: 64
+Alpha e: 39.000000
+Beta e: 6.000000
+Gamma e: 19.000000
+Alpha r: 40.000000
+Beta r: 18.000000
+Gamma r: 6.000000
+
+Elapsed seconds: 0.502000
+Current frame: 58 of 144
+GPU preparation:
+Max work group size: 256
+Number of bees: 64
+Alpha e: 39.000000
+Beta e: 6.000000
+Gamma e: 19.000000
+Alpha r: 40.000000
+Beta r: 18.000000
+Gamma r: 6.000000
+
+Elapsed seconds: 0.499000
+Current frame: 59 of 144
+GPU preparation:
+Max work group size: 256
+Number of bees: 64
+Alpha e: 39.000000
+Beta e: 6.000000
+Gamma e: 19.000000
+Alpha r: 40.000000
+Beta r: 18.000000
+Gamma r: 6.000000
+
+Elapsed seconds: 0.499000
+Current frame: 60 of 144
+GPU preparation:
+Max work group size: 256
+Number of bees: 64
+Alpha e: 39.000000
+Beta e: 6.000000
+Gamma e: 19.000000
+Alpha r: 40.000000
+Beta r: 18.000000
+Gamma r: 6.000000
+
+Elapsed seconds: 0.498000
+Current frame: 61 of 144
+GPU preparation:
+Max work group size: 256
+Number of bees: 64
+Alpha e: 39.000000
+Beta e: 6.000000
+Gamma e: 19.000000
+Alpha r: 40.000000
+Beta r: 18.000000
+Gamma r: 6.000000
+
+Elapsed seconds: 0.502000
+Current frame: 62 of 144
+GPU preparation:
+Max work group size: 256
+Number of bees: 64
+Alpha e: 39.000000
+Beta e: 6.000000
+Gamma e: 19.000000
+Alpha r: 40.000000
+Beta r: 18.000000
+Gamma r: 6.000000
+
+Elapsed seconds: 0.503000
+Current frame: 63 of 144
+GPU preparation:
+Max work group size: 256
+Number of bees: 64
+Alpha e: 39.000000
+Beta e: 6.000000
+Gamma e: 19.000000
+Alpha r: 40.000000
+Beta r: 18.000000
+Gamma r: 6.000000
+
+Elapsed seconds: 0.497000
+Current frame: 64 of 144
+GPU preparation:
+Max work group size: 256
+Number of bees: 64
+Alpha e: 39.000000
+Beta e: 6.000000
+Gamma e: 19.000000
+Alpha r: 40.000000
+Beta r: 18.000000
+Gamma r: 6.000000
+
+Elapsed seconds: 0.495000
+Current frame: 65 of 144
+GPU preparation:
+Max work group size: 256
+Number of bees: 64
+Alpha e: 39.000000
+Beta e: 6.000000
+Gamma e: 19.000000
+Alpha r: 40.000000
+Beta r: 18.000000
+Gamma r: 6.000000
+
+Elapsed seconds: 0.499000
+Current frame: 66 of 144
+GPU preparation:
+Max work group size: 256
+Number of bees: 64
+Alpha e: 39.000000
+Beta e: 6.000000
+Gamma e: 19.000000
+Alpha r: 40.000000
+Beta r: 18.000000
+Gamma r: 6.000000
+
+Elapsed seconds: 0.505000
+Current frame: 67 of 144
+GPU preparation:
+Max work group size: 256
+Number of bees: 64
+Alpha e: 39.000000
+Beta e: 6.000000
+Gamma e: 19.000000
+Alpha r: 40.000000
+Beta r: 18.000000
+Gamma r: 6.000000
+
+Elapsed seconds: 0.498000
+Current frame: 68 of 144
+GPU preparation:
+Max work group size: 256
+Number of bees: 64
+Alpha e: 39.000000
+Beta e: 6.000000
+Gamma e: 19.000000
+Alpha r: 40.000000
+Beta r: 18.000000
+Gamma r: 6.000000
+
+Elapsed seconds: 0.514000
+Current frame: 69 of 144
+GPU preparation:
+Max work group size: 256
+Number of bees: 64
+Alpha e: 39.000000
+Beta e: 6.000000
+Gamma e: 19.000000
+Alpha r: 40.000000
+Beta r: 18.000000
+Gamma r: 6.000000
+
+Elapsed seconds: 0.499000
+Current frame: 70 of 144
+GPU preparation:
+Max work group size: 256
+Number of bees: 64
+Alpha e: 39.000000
+Beta e: 6.000000
+Gamma e: 19.000000
+Alpha r: 40.000000
+Beta r: 18.000000
+Gamma r: 6.000000
+
+Elapsed seconds: 0.497000
+Current frame: 71 of 144
+GPU preparation:
+Max work group size: 256
+Number of bees: 64
+Alpha e: 39.000000
+Beta e: 6.000000
+Gamma e: 19.000000
+Alpha r: 40.000000
+Beta r: 18.000000
+Gamma r: 6.000000
+
+Elapsed seconds: 0.528000
+Current frame: 72 of 144
+GPU preparation:
+Max work group size: 256
+Number of bees: 64
+Alpha e: 39.000000
+Beta e: 6.000000
+Gamma e: 19.000000
+Alpha r: 40.000000
+Beta r: 18.000000
+Gamma r: 6.000000
+
+Elapsed seconds: 0.509000
+Current frame: 73 of 144
+GPU preparation:
+Max work group size: 256
+Number of bees: 64
+Alpha e: 39.000000
+Beta e: 6.000000
+Gamma e: 19.000000
+Alpha r: 40.000000
+Beta r: 18.000000
+Gamma r: 6.000000
+
+Elapsed seconds: 0.507000
+Current frame: 74 of 144
+GPU preparation:
+Max work group size: 256
+Number of bees: 64
+Alpha e: 39.000000
+Beta e: 6.000000
+Gamma e: 19.000000
+Alpha r: 40.000000
+Beta r: 18.000000
+Gamma r: 6.000000
+
+Elapsed seconds: 0.506000
+Current frame: 75 of 144
+GPU preparation:
+Max work group size: 256
+Number of bees: 64
+Alpha e: 39.000000
+Beta e: 6.000000
+Gamma e: 19.000000
+Alpha r: 40.000000
+Beta r: 18.000000
+Gamma r: 6.000000
+
+Elapsed seconds: 0.508000
+Current frame: 76 of 144
+GPU preparation:
+Max work group size: 256
+Number of bees: 64
+Alpha e: 39.000000
+Beta e: 6.000000
+Gamma e: 19.000000
+Alpha r: 40.000000
+Beta r: 18.000000
+Gamma r: 6.000000
+
+Elapsed seconds: 0.499000
+Current frame: 77 of 144
+GPU preparation:
+Max work group size: 256
+Number of bees: 64
+Alpha e: 39.000000
+Beta e: 6.000000
+Gamma e: 19.000000
+Alpha r: 40.000000
+Beta r: 18.000000
+Gamma r: 6.000000
+
+Elapsed seconds: 0.504000
+Current frame: 78 of 144
+GPU preparation:
+Max work group size: 256
+Number of bees: 64
+Alpha e: 39.000000
+Beta e: 6.000000
+Gamma e: 19.000000
+Alpha r: 40.000000
+Beta r: 18.000000
+Gamma r: 6.000000
+
+Elapsed seconds: 0.499000
+Current frame: 79 of 144
+GPU preparation:
+Max work group size: 256
+Number of bees: 64
+Alpha e: 39.000000
+Beta e: 6.000000
+Gamma e: 19.000000
+Alpha r: 40.000000
+Beta r: 18.000000
+Gamma r: 6.000000
+
+Elapsed seconds: 0.505000
+Current frame: 80 of 144
+GPU preparation:
+Max work group size: 256
+Number of bees: 64
+Alpha e: 39.000000
+Beta e: 6.000000
+Gamma e: 19.000000
+Alpha r: 40.000000
+Beta r: 18.000000
+Gamma r: 6.000000
+
+Elapsed seconds: 0.499000
+Current frame: 81 of 144
+GPU preparation:
+Max work group size: 256
+Number of bees: 64
+Alpha e: 39.000000
+Beta e: 6.000000
+Gamma e: 19.000000
+Alpha r: 40.000000
+Beta r: 18.000000
+Gamma r: 6.000000
+
+Elapsed seconds: 0.502000
+Current frame: 82 of 144
+GPU preparation:
+Max work group size: 256
+Number of bees: 64
+Alpha e: 39.000000
+Beta e: 6.000000
+Gamma e: 19.000000
+Alpha r: 40.000000
+Beta r: 18.000000
+Gamma r: 6.000000
+
+Elapsed seconds: 0.501000
+Current frame: 83 of 144
+GPU preparation:
+Max work group size: 256
+Number of bees: 64
+Alpha e: 39.000000
+Beta e: 6.000000
+Gamma e: 19.000000
+Alpha r: 40.000000
+Beta r: 18.000000
+Gamma r: 6.000000
+
+Elapsed seconds: 0.501000
+Current frame: 84 of 144
+GPU preparation:
+Max work group size: 256
+Number of bees: 64
+Alpha e: 39.000000
+Beta e: 6.000000
+Gamma e: 19.000000
+Alpha r: 40.000000
+Beta r: 18.000000
+Gamma r: 6.000000
+
+Elapsed seconds: 0.501000
+Current frame: 85 of 144
+GPU preparation:
+Max work group size: 256
+Number of bees: 64
+Alpha e: 39.000000
+Beta e: 6.000000
+Gamma e: 19.000000
+Alpha r: 40.000000
+Beta r: 18.000000
+Gamma r: 6.000000
+
+Elapsed seconds: 0.498000
+Current frame: 86 of 144
+GPU preparation:
+Max work group size: 256
+Number of bees: 64
+Alpha e: 39.000000
+Beta e: 6.000000
+Gamma e: 19.000000
+Alpha r: 40.000000
+Beta r: 18.000000
+Gamma r: 6.000000
+
+Elapsed seconds: 0.498000
+Current frame: 87 of 144
+GPU preparation:
+Max work group size: 256
+Number of bees: 64
+Alpha e: 39.000000
+Beta e: 6.000000
+Gamma e: 19.000000
+Alpha r: 40.000000
+Beta r: 18.000000
+Gamma r: 6.000000
+
+Elapsed seconds: 0.499000
+Current frame: 88 of 144
+GPU preparation:
+Max work group size: 256
+Number of bees: 64
+Alpha e: 39.000000
+Beta e: 6.000000
+Gamma e: 19.000000
+Alpha r: 40.000000
+Beta r: 18.000000
+Gamma r: 6.000000
+
+Elapsed seconds: 0.509000
+Current frame: 89 of 144
+GPU preparation:
+Max work group size: 256
+Number of bees: 64
+Alpha e: 39.000000
+Beta e: 6.000000
+Gamma e: 19.000000
+Alpha r: 40.000000
+Beta r: 18.000000
+Gamma r: 6.000000
+
+Elapsed seconds: 0.494000
+Current frame: 90 of 144
+GPU preparation:
+Max work group size: 256
+Number of bees: 64
+Alpha e: 39.000000
+Beta e: 6.000000
+Gamma e: 19.000000
+Alpha r: 40.000000
+Beta r: 18.000000
+Gamma r: 6.000000
+
+Elapsed seconds: 0.497000
+Current frame: 91 of 144
+GPU preparation:
+Max work group size: 256
+Number of bees: 64
+Alpha e: 39.000000
+Beta e: 6.000000
+Gamma e: 19.000000
+Alpha r: 40.000000
+Beta r: 18.000000
+Gamma r: 6.000000
+
+Elapsed seconds: 0.497000
+Current frame: 92 of 144
+GPU preparation:
+Max work group size: 256
+Number of bees: 64
+Alpha e: 39.000000
+Beta e: 6.000000
+Gamma e: 19.000000
+Alpha r: 40.000000
+Beta r: 18.000000
+Gamma r: 6.000000
+
+Elapsed seconds: 0.496000
+Current frame: 93 of 144
+GPU preparation:
+Max work group size: 256
+Number of bees: 64
+Alpha e: 39.000000
+Beta e: 6.000000
+Gamma e: 19.000000
+Alpha r: 40.000000
+Beta r: 18.000000
+Gamma r: 6.000000
+
+Elapsed seconds: 0.496000
+Current frame: 94 of 144
+GPU preparation:
+Max work group size: 256
+Number of bees: 64
+Alpha e: 39.000000
+Beta e: 6.000000
+Gamma e: 19.000000
+Alpha r: 40.000000
+Beta r: 18.000000
+Gamma r: 6.000000
+
+Elapsed seconds: 0.495000
+Current frame: 95 of 144
+GPU preparation:
+Max work group size: 256
+Number of bees: 64
+Alpha e: 39.000000
+Beta e: 6.000000
+Gamma e: 19.000000
+Alpha r: 40.000000
+Beta r: 18.000000
+Gamma r: 6.000000
+
+Elapsed seconds: 0.494000
+Current frame: 96 of 144
+GPU preparation:
+Max work group size: 256
+Number of bees: 64
+Alpha e: 39.000000
+Beta e: 6.000000
+Gamma e: 19.000000
+Alpha r: 40.000000
+Beta r: 18.000000
+Gamma r: 6.000000
+
+Elapsed seconds: 0.498000
+Current frame: 97 of 144
+GPU preparation:
+Max work group size: 256
+Number of bees: 64
+Alpha e: 39.000000
+Beta e: 6.000000
+Gamma e: 19.000000
+Alpha r: 40.000000
+Beta r: 18.000000
+Gamma r: 6.000000
+
+Elapsed seconds: 0.501000
+Current frame: 98 of 144
+GPU preparation:
+Max work group size: 256
+Number of bees: 64
+Alpha e: 39.000000
+Beta e: 6.000000
+Gamma e: 19.000000
+Alpha r: 40.000000
+Beta r: 18.000000
+Gamma r: 6.000000
+
+Elapsed seconds: 0.497000
+Current frame: 99 of 144
+GPU preparation:
+Max work group size: 256
+Number of bees: 64
+Alpha e: 39.000000
+Beta e: 6.000000
+Gamma e: 19.000000
+Alpha r: 40.000000
+Beta r: 18.000000
+Gamma r: 6.000000
+
+Elapsed seconds: 0.498000
+Current frame: 100 of 144
+GPU preparation:
+Max work group size: 256
+Number of bees: 64
+Alpha e: 39.000000
+Beta e: 6.000000
+Gamma e: 19.000000
+Alpha r: 40.000000
+Beta r: 18.000000
+Gamma r: 6.000000
+
+Elapsed seconds: 0.497000
+Current frame: 101 of 144
+GPU preparation:
+Max work group size: 256
+Number of bees: 64
+Alpha e: 39.000000
+Beta e: 6.000000
+Gamma e: 19.000000
+Alpha r: 40.000000
+Beta r: 18.000000
+Gamma r: 6.000000
+
+Elapsed seconds: 0.497000
+Current frame: 102 of 144
+GPU preparation:
+Max work group size: 256
+Number of bees: 64
+Alpha e: 39.000000
+Beta e: 6.000000
+Gamma e: 19.000000
+Alpha r: 40.000000
+Beta r: 18.000000
+Gamma r: 6.000000
+
+Elapsed seconds: 0.497000
+Current frame: 103 of 144
+GPU preparation:
+Max work group size: 256
+Number of bees: 64
+Alpha e: 39.000000
+Beta e: 6.000000
+Gamma e: 19.000000
+Alpha r: 40.000000
+Beta r: 18.000000
+Gamma r: 6.000000
+
+Elapsed seconds: 0.494000
+Current frame: 104 of 144
+GPU preparation:
+Max work group size: 256
+Number of bees: 64
+Alpha e: 39.000000
+Beta e: 6.000000
+Gamma e: 19.000000
+Alpha r: 40.000000
+Beta r: 18.000000
+Gamma r: 6.000000
+
+Elapsed seconds: 0.494000
+Current frame: 105 of 144
+GPU preparation:
+Max work group size: 256
+Number of bees: 64
+Alpha e: 39.000000
+Beta e: 6.000000
+Gamma e: 19.000000
+Alpha r: 40.000000
+Beta r: 18.000000
+Gamma r: 6.000000
+
+Elapsed seconds: 0.496000
+Current frame: 106 of 144
+GPU preparation:
+Max work group size: 256
+Number of bees: 64
+Alpha e: 39.000000
+Beta e: 6.000000
+Gamma e: 19.000000
+Alpha r: 40.000000
+Beta r: 18.000000
+Gamma r: 6.000000
+
+Elapsed seconds: 0.497000
+Current frame: 107 of 144
+GPU preparation:
+Max work group size: 256
+Number of bees: 64
+Alpha e: 39.000000
+Beta e: 6.000000
+Gamma e: 19.000000
+Alpha r: 40.000000
+Beta r: 18.000000
+Gamma r: 6.000000
+
+Elapsed seconds: 0.496000
+Current frame: 108 of 144
+GPU preparation:
+Max work group size: 256
+Number of bees: 64
+Alpha e: 39.000000
+Beta e: 6.000000
+Gamma e: 19.000000
+Alpha r: 40.000000
+Beta r: 18.000000
+Gamma r: 6.000000
+
+Elapsed seconds: 0.496000
+Current frame: 109 of 144
+GPU preparation:
+Max work group size: 256
+Number of bees: 64
+Alpha e: 39.000000
+Beta e: 6.000000
+Gamma e: 19.000000
+Alpha r: 40.000000
+Beta r: 18.000000
+Gamma r: 6.000000
+
+Elapsed seconds: 0.497000
+Current frame: 110 of 144
+GPU preparation:
+Max work group size: 256
+Number of bees: 64
+Alpha e: 39.000000
+Beta e: 6.000000
+Gamma e: 19.000000
+Alpha r: 40.000000
+Beta r: 18.000000
+Gamma r: 6.000000
+
+Elapsed seconds: 0.497000
+Current frame: 111 of 144
+GPU preparation:
+Max work group size: 256
+Number of bees: 64
+Alpha e: 39.000000
+Beta e: 6.000000
+Gamma e: 19.000000
+Alpha r: 40.000000
+Beta r: 18.000000
+Gamma r: 6.000000
+
+Elapsed seconds: 0.496000
+Current frame: 112 of 144
+GPU preparation:
+Max work group size: 256
+Number of bees: 64
+Alpha e: 39.000000
+Beta e: 6.000000
+Gamma e: 19.000000
+Alpha r: 40.000000
+Beta r: 18.000000
+Gamma r: 6.000000
+
+Elapsed seconds: 0.499000
+Current frame: 113 of 144
+GPU preparation:
+Max work group size: 256
+Number of bees: 64
+Alpha e: 39.000000
+Beta e: 6.000000
+Gamma e: 19.000000
+Alpha r: 40.000000
+Beta r: 18.000000
+Gamma r: 6.000000
+
+Elapsed seconds: 0.494000
+Current frame: 114 of 144
+GPU preparation:
+Max work group size: 256
+Number of bees: 64
+Alpha e: 39.000000
+Beta e: 6.000000
+Gamma e: 19.000000
+Alpha r: 40.000000
+Beta r: 18.000000
+Gamma r: 6.000000
+
+Elapsed seconds: 0.498000
+Current frame: 115 of 144
+GPU preparation:
+Max work group size: 256
+Number of bees: 64
+Alpha e: 39.000000
+Beta e: 6.000000
+Gamma e: 19.000000
+Alpha r: 40.000000
+Beta r: 18.000000
+Gamma r: 6.000000
+
+Elapsed seconds: 0.497000
+Current frame: 116 of 144
+GPU preparation:
+Max work group size: 256
+Number of bees: 64
+Alpha e: 39.000000
+Beta e: 6.000000
+Gamma e: 19.000000
+Alpha r: 40.000000
+Beta r: 18.000000
+Gamma r: 6.000000
+
+Elapsed seconds: 0.498000
+Current frame: 117 of 144
+GPU preparation:
+Max work group size: 256
+Number of bees: 64
+Alpha e: 39.000000
+Beta e: 6.000000
+Gamma e: 19.000000
+Alpha r: 40.000000
+Beta r: 18.000000
+Gamma r: 6.000000
+
+Elapsed seconds: 0.498000
+Current frame: 118 of 144
+GPU preparation:
+Max work group size: 256
+Number of bees: 64
+Alpha e: 39.000000
+Beta e: 6.000000
+Gamma e: 19.000000
+Alpha r: 40.000000
+Beta r: 18.000000
+Gamma r: 6.000000
+
+Elapsed seconds: 0.495000
+Current frame: 119 of 144
+GPU preparation:
+Max work group size: 256
+Number of bees: 64
+Alpha e: 39.000000
+Beta e: 6.000000
+Gamma e: 19.000000
+Alpha r: 40.000000
+Beta r: 18.000000
+Gamma r: 6.000000
+
+Elapsed seconds: 0.493000
+Current frame: 120 of 144
+GPU preparation:
+Max work group size: 256
+Number of bees: 64
+Alpha e: 39.000000
+Beta e: 6.000000
+Gamma e: 19.000000
+Alpha r: 40.000000
+Beta r: 18.000000
+Gamma r: 6.000000
+
+Elapsed seconds: 0.497000
+Current frame: 121 of 144
+GPU preparation:
+Max work group size: 256
+Number of bees: 64
+Alpha e: 39.000000
+Beta e: 6.000000
+Gamma e: 19.000000
+Alpha r: 40.000000
+Beta r: 18.000000
+Gamma r: 6.000000
+
+Elapsed seconds: 0.501000
+Current frame: 122 of 144
+GPU preparation:
+Max work group size: 256
+Number of bees: 64
+Alpha e: 39.000000
+Beta e: 6.000000
+Gamma e: 19.000000
+Alpha r: 40.000000
+Beta r: 18.000000
+Gamma r: 6.000000
+
+Elapsed seconds: 0.496000
+Current frame: 123 of 144
+GPU preparation:
+Max work group size: 256
+Number of bees: 64
+Alpha e: 39.000000
+Beta e: 6.000000
+Gamma e: 19.000000
+Alpha r: 40.000000
+Beta r: 18.000000
+Gamma r: 6.000000
+
+Elapsed seconds: 0.499000
+Current frame: 124 of 144
+GPU preparation:
+Max work group size: 256
+Number of bees: 64
+Alpha e: 39.000000
+Beta e: 6.000000
+Gamma e: 19.000000
+Alpha r: 40.000000
+Beta r: 18.000000
+Gamma r: 6.000000
+
+Elapsed seconds: 0.497000
+Current frame: 125 of 144
+GPU preparation:
+Max work group size: 256
+Number of bees: 64
+Alpha e: 39.000000
+Beta e: 6.000000
+Gamma e: 19.000000
+Alpha r: 40.000000
+Beta r: 18.000000
+Gamma r: 6.000000
+
+Elapsed seconds: 0.496000
+Current frame: 126 of 144
+GPU preparation:
+Max work group size: 256
+Number of bees: 64
+Alpha e: 39.000000
+Beta e: 6.000000
+Gamma e: 19.000000
+Alpha r: 40.000000
+Beta r: 18.000000
+Gamma r: 6.000000
+
+Elapsed seconds: 0.500000
+Current frame: 127 of 144
+GPU preparation:
+Max work group size: 256
+Number of bees: 64
+Alpha e: 39.000000
+Beta e: 6.000000
+Gamma e: 19.000000
+Alpha r: 40.000000
+Beta r: 18.000000
+Gamma r: 6.000000
+
+Elapsed seconds: 0.501000
+Current frame: 128 of 144
+GPU preparation:
+Max work group size: 256
+Number of bees: 64
+Alpha e: 39.000000
+Beta e: 6.000000
+Gamma e: 19.000000
+Alpha r: 40.000000
+Beta r: 18.000000
+Gamma r: 6.000000
+
+Elapsed seconds: 0.496000
+Current frame: 129 of 144
+GPU preparation:
+Max work group size: 256
+Number of bees: 64
+Alpha e: 39.000000
+Beta e: 6.000000
+Gamma e: 19.000000
+Alpha r: 40.000000
+Beta r: 18.000000
+Gamma r: 6.000000
+
+Elapsed seconds: 0.497000
+Current frame: 130 of 144
+GPU preparation:
+Max work group size: 256
+Number of bees: 64
+Alpha e: 39.000000
+Beta e: 6.000000
+Gamma e: 19.000000
+Alpha r: 40.000000
+Beta r: 18.000000
+Gamma r: 6.000000
+
+Elapsed seconds: 0.495000
+Current frame: 131 of 144
+GPU preparation:
+Max work group size: 256
+Number of bees: 64
+Alpha e: 39.000000
+Beta e: 6.000000
+Gamma e: 19.000000
+Alpha r: 40.000000
+Beta r: 18.000000
+Gamma r: 6.000000
+
+Elapsed seconds: 0.496000
+Current frame: 132 of 144
+GPU preparation:
+Max work group size: 256
+Number of bees: 64
+Alpha e: 39.000000
+Beta e: 6.000000
+Gamma e: 19.000000
+Alpha r: 40.000000
+Beta r: 18.000000
+Gamma r: 6.000000
+
+Elapsed seconds: 0.499000
+Current frame: 133 of 144
+GPU preparation:
+Max work group size: 256
+Number of bees: 64
+Alpha e: 39.000000
+Beta e: 6.000000
+Gamma e: 19.000000
+Alpha r: 40.000000
+Beta r: 18.000000
+Gamma r: 6.000000
+
+Elapsed seconds: 0.499000
+Current frame: 134 of 144
+GPU preparation:
+Max work group size: 256
+Number of bees: 64
+Alpha e: 39.000000
+Beta e: 6.000000
+Gamma e: 19.000000
+Alpha r: 40.000000
+Beta r: 18.000000
+Gamma r: 6.000000
+
+Elapsed seconds: 0.495000
+Current frame: 135 of 144
+GPU preparation:
+Max work group size: 256
+Number of bees: 64
+Alpha e: 39.000000
+Beta e: 6.000000
+Gamma e: 19.000000
+Alpha r: 40.000000
+Beta r: 18.000000
+Gamma r: 6.000000
+
+Elapsed seconds: 0.496000
+Current frame: 136 of 144
+GPU preparation:
+Max work group size: 256
+Number of bees: 64
+Alpha e: 39.000000
+Beta e: 6.000000
+Gamma e: 19.000000
+Alpha r: 40.000000
+Beta r: 18.000000
+Gamma r: 6.000000
+
+Elapsed seconds: 0.494000
+Current frame: 137 of 144
+GPU preparation:
+Max work group size: 256
+Number of bees: 64
+Alpha e: 39.000000
+Beta e: 6.000000
+Gamma e: 19.000000
+Alpha r: 40.000000
+Beta r: 18.000000
+Gamma r: 6.000000
+
+Elapsed seconds: 0.494000
+Current frame: 138 of 144
+GPU preparation:
+Max work group size: 256
+Number of bees: 64
+Alpha e: 39.000000
+Beta e: 6.000000
+Gamma e: 19.000000
+Alpha r: 40.000000
+Beta r: 18.000000
+Gamma r: 6.000000
+
+Elapsed seconds: 0.496000
+Current frame: 139 of 144
+GPU preparation:
+Max work group size: 256
+Number of bees: 64
+Alpha e: 39.000000
+Beta e: 6.000000
+Gamma e: 19.000000
+Alpha r: 40.000000
+Beta r: 18.000000
+Gamma r: 6.000000
+
+Elapsed seconds: 0.498000
+Current frame: 140 of 144
+GPU preparation:
+Max work group size: 256
+Number of bees: 64
+Alpha e: 39.000000
+Beta e: 6.000000
+Gamma e: 19.000000
+Alpha r: 40.000000
+Beta r: 18.000000
+Gamma r: 6.000000
+
+Elapsed seconds: 0.494000
+Current frame: 141 of 144
+GPU preparation:
+Max work group size: 256
+Number of bees: 64
+Alpha e: 39.000000
+Beta e: 6.000000
+Gamma e: 19.000000
+Alpha r: 40.000000
+Beta r: 18.000000
+Gamma r: 6.000000
+
+Elapsed seconds: 0.503000
+Current frame: 142 of 144
+GPU preparation:
+Max work group size: 256
+Number of bees: 64
+Alpha e: 39.000000
+Beta e: 6.000000
+Gamma e: 19.000000
+Alpha r: 40.000000
+Beta r: 18.000000
+Gamma r: 6.000000
+
+Elapsed seconds: 0.498000
+Current frame: 143 of 144
+GPU preparation:
+Max work group size: 256
+Number of bees: 64
+Alpha e: 39.000000
+Beta e: 6.000000
+Gamma e: 19.000000
+Alpha r: 40.000000
+Beta r: 18.000000
+Gamma r: 6.000000
+
+Elapsed seconds: 0.498000
+Current frame: 144 of 144
+GPU preparation:
+Max work group size: 256
+Number of bees: 64
+Alpha e: 39.000000
+Beta e: 6.000000
+Gamma e: 19.000000
+Alpha r: 40.000000
+Beta r: 18.000000
+Gamma r: 6.000000
+
+Elapsed seconds: 0.497000
+Average seconds: 0.503935

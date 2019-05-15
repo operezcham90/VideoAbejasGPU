@@ -1,0 +1,209 @@
+
+Reading config file: 
+Path ALOV++: /home/lcd/
+Path result: /home/lcd/result/gen10/12-MovingCamera_17
+Image dir: imagedata++/
+Annotation dir: alov300++_rectangleAnnotation_full/
+Video name: 12-MovingCamera
+Video number: 17
+Max window size: 24
+Cores per bee: 4
+Max generation: 10
+Eta for mutation: 25
+Eta for crossover: 2
+Alpha for exploration: 0
+Beta for exploration: 0
+Gamma for exploration: 0
+Alpha for foraging: 0
+Beta for foraging: 0
+Gamma for foraging: 0
+Max window / sqrt(cores per bee): 12 (Should be integer)
+
+Reading annotation file: 
+u0: 381
+v0: 123
+Real window: 420
+First frame: 4
+Last frame: 19
+
+Current frame: 5 of 19
+GPU preparation:
+Max work group size: 256
+Number of bees: 64
+Alpha e: 39.000000
+Beta e: 6.000000
+Gamma e: 19.000000
+Alpha r: 40.000000
+Beta r: 18.000000
+Gamma r: 6.000000
+
+Elapsed seconds: 0.082000
+Current frame: 6 of 19
+GPU preparation:
+Max work group size: 256
+Number of bees: 64
+Alpha e: 39.000000
+Beta e: 6.000000
+Gamma e: 19.000000
+Alpha r: 40.000000
+Beta r: 18.000000
+Gamma r: 6.000000
+
+Elapsed seconds: 0.080000
+Current frame: 7 of 19
+GPU preparation:
+Max work group size: 256
+Number of bees: 64
+Alpha e: 39.000000
+Beta e: 6.000000
+Gamma e: 19.000000
+Alpha r: 40.000000
+Beta r: 18.000000
+Gamma r: 6.000000
+
+Elapsed seconds: 0.078000
+Current frame: 8 of 19
+GPU preparation:
+Max work group size: 256
+Number of bees: 64
+Alpha e: 39.000000
+Beta e: 6.000000
+Gamma e: 19.000000
+Alpha r: 40.000000
+Beta r: 18.000000
+Gamma r: 6.000000
+
+Elapsed seconds: 0.080000
+Current frame: 9 of 19
+GPU preparation:
+Max work group size: 256
+Number of bees: 64
+Alpha e: 39.000000
+Beta e: 6.000000
+Gamma e: 19.000000
+Alpha r: 40.000000
+Beta r: 18.000000
+Gamma r: 6.000000
+
+Elapsed seconds: 0.078000
+Current frame: 10 of 19
+GPU preparation:
+Max work group size: 256
+Number of bees: 64
+Alpha e: 39.000000
+Beta e: 6.000000
+Gamma e: 19.000000
+Alpha r: 40.000000
+Beta r: 18.000000
+Gamma r: 6.000000
+
+Elapsed seconds: 0.078000
+Current frame: 11 of 19
+GPU preparation:
+Max work group size: 256
+Number of bees: 64
+Alpha e: 39.000000
+Beta e: 6.000000
+Gamma e: 19.000000
+Alpha r: 40.000000
+Beta r: 18.000000
+Gamma r: 6.000000
+
+Elapsed seconds: 0.081000
+Current frame: 12 of 19
+GPU preparation:
+Max work group size: 256
+Number of bees: 64
+Alpha e: 39.000000
+Beta e: 6.000000
+Gamma e: 19.000000
+Alpha r: 40.000000
+Beta r: 18.000000
+Gamma r: 6.000000
+
+Elapsed seconds: 0.083000
+Current frame: 13 of 19
+GPU preparation:
+Max work group size: 256
+Number of bees: 64
+Alpha e: 39.000000
+Beta e: 6.000000
+Gamma e: 19.000000
+Alpha r: 40.000000
+Beta r: 18.000000
+Gamma r: 6.000000
+
+Elapsed seconds: 0.079000
+Current frame: 14 of 19
+GPU preparation:
+Max work group size: 256
+Number of bees: 64
+Alpha e: 39.000000
+Beta e: 6.000000
+Gamma e: 19.000000
+Alpha r: 40.000000
+Beta r: 18.000000
+Gamma r: 6.000000
+
+Elapsed seconds: 0.080000
+Current frame: 15 of 19
+GPU preparation:
+Max work group size: 256
+Number of bees: 64
+Alpha e: 39.000000
+Beta e: 6.000000
+Gamma e: 19.000000
+Alpha r: 40.000000
+Beta r: 18.000000
+Gamma r: 6.000000
+
+Elapsed seconds: 0.080000
+Current frame: 16 of 19
+GPU preparation:
+Max work group size: 256
+Number of bees: 64
+Alpha e: 39.000000
+Beta e: 6.000000
+Gamma e: 19.000000
+Alpha r: 40.000000
+Beta r: 18.000000
+Gamma r: 6.000000
+
+Elapsed seconds: 0.082000
+Current frame: 17 of 19
+GPU preparation:
+Max work group size: 256
+Number of bees: 64
+Alpha e: 39.000000
+Beta e: 6.000000
+Gamma e: 19.000000
+Alpha r: 40.000000
+Beta r: 18.000000
+Gamma r: 6.000000
+
+Elapsed seconds: 0.080000
+Current frame: 18 of 19
+GPU preparation:
+Max work group size: 256
+Number of bees: 64
+Alpha e: 39.000000
+Beta e: 6.000000
+Gamma e: 19.000000
+Alpha r: 40.000000
+Beta r: 18.000000
+Gamma r: 6.000000
+
+Elapsed seconds: 0.080000
+Current frame: 19 of 19
+GPU preparation:
+Max work group size: 256
+Number of bees: 64
+Alpha e: 39.000000
+Beta e: 6.000000
+Gamma e: 19.000000
+Alpha r: 40.000000
+Beta r: 18.000000
+Gamma r: 6.000000
+
+Elapsed seconds: 0.080000
+Average seconds: 0.085786
